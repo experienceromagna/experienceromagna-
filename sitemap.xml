@@ -1,9 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
   <url>
     <loc>https://www.experienceromagna.com/</loc>
-    <lastmod>2025-05-08</lastmod>
+    <lastmod>2025-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.experienceromagna.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.experienceromagna.com/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.experienceromagna.com/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.experienceromagna.com/?lang=fr"/>
   </url>
+
+  <url>
+    <loc>https://www.experienceromagna.com/percorsi.html</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.experienceromagna.com/percorsi.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.experienceromagna.com/percorsi.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.experienceromagna.com/percorsi.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.experienceromagna.com/percorsi.html?lang=fr"/>
+  </url>
+
+  <url>
+    <loc>https://www.experienceromagna.com/occasioni.html</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.experienceromagna.com/occasioni.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.experienceromagna.com/occasioni.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.experienceromagna.com/occasioni.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.experienceromagna.com/occasioni.html?lang=fr"/>
+  </url>
+
+  <url>
+    <loc>https://www.experienceromagna.com/missione.html</loc>
+    <lastmod>2025-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.experienceromagna.com/missione.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.experienceromagna.com/missione.html?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://www.experienceromagna.com/missione.html?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.experienceromagna.com/missione.html?lang=fr"/>
+  </url>
+
 </urlset>

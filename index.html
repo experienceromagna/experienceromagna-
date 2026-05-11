@@ -3,21 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Experience Romagna – Esperienze Autentiche nella Valle del Sorsa, Cesena</title>
-<meta name="description" content="Vivi un giorno autentico in Romagna: vendemmia, orto biologico, cucina tradizionale, trekking e olio d'oliva nella Valle del Sorsa. A due passi dal mare. Progetto benefico Peace and Good People ODV.">
-<meta name="keywords" content="esperienze Romagna, agriturismo Cesena, cooking class Romagna, vendemmia Romagna, trekking Valle del Sorsa, cosa fare Romagna, turismo rurale Cesenatico, tagliatelle fatte a mano, olio extravergine Romagna, rural experiences Italy, Romagna countryside, cosa fare vicino Cesenatico">
-<meta name="author" content="Experience Romagna – Peace and Good People ODV">
+<title>Experience Romagna – Esperienze Gratuite nella Valle del Sorsa, Cesena</title>
+<meta name="description" content="Esperienze autentiche e gratuite nella Valle del Sorsa: trekking, vendemmia, cucina romagnola, orto biologico. Progetto gratuito di Peace and Good People ODV. A due passi da Cesenatico.">
+<meta name="keywords" content="esperienze gratuite Romagna, cosa fare Cesena, trekking Valle del Sorsa, cooking class Romagna gratis, agriturismo Cesenatico, turismo rurale Romagna, vendemmia Sangiovese, cucina romagnola, cosa fare vicino al mare Romagna">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.experienceromagna.com/">
-<meta property="og:title" content="Experience Romagna – Vivi un Giorno Autentico in Romagna">
-<meta property="og:description" content="Vendemmia, cucina, orto biologico e trekking nella Valle del Sorsa. Un progetto benefico a due passi dal mare di Romagna.">
+<meta property="og:title" content="Experience Romagna – Esperienze Autentiche e Gratuite in Romagna">
+<meta property="og:description" content="Trekking, cucina, vigneto e orto biologico nella Valle del Sorsa. Gratuito. Progetto di Peace and Good People ODV.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.experienceromagna.com/">
 <meta property="og:image" content="https://www.experienceromagna.com/images/hero-colline.png">
-<meta property="og:locale" content="it_IT">
-<meta property="og:locale:alternate" content="en_GB">
-<meta property="og:locale:alternate" content="de_DE">
-<meta property="og:locale:alternate" content="fr_FR">
 <link rel="alternate" hreflang="it" href="https://www.experienceromagna.com/">
 <link rel="alternate" hreflang="en" href="https://www.experienceromagna.com/?lang=en">
 <link rel="alternate" hreflang="de" href="https://www.experienceromagna.com/?lang=de">
@@ -28,162 +23,134 @@
   "@context": "https://schema.org",
   "@type": "TouristAttraction",
   "name": "Experience Romagna",
-  "description": "Esperienze rurali autentiche nella Valle del Sorsa: vendemmia, cucina romagnola, orto biologico, trekking e molto altro.",
+  "description": "Esperienze rurali autentiche e gratuite nella Valle del Sorsa, Cesena. Progetto di Peace and Good People ODV.",
   "url": "https://www.experienceromagna.com",
   "telephone": "+393518821873",
   "email": "pgp.odv@gmail.com",
+  "isAccessibleForFree": true,
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Valle del Sorsa",
+    "addressLocality": "Cesena",
     "addressRegion": "Emilia-Romagna",
     "addressCountry": "IT"
   },
-  "priceRange": "€€",
-  "image": "https://www.experienceromagna.com/images/hero-colline.png"
+  "image": "https://www.experienceromagna.com/images/hero-colline.png",
+  "sameAs": [
+    "https://www.facebook.com/share/1J6EupGuLo/",
+    "https://www.instagram.com/pgp.odv"
+  ]
 }
 </script>
+<link rel="stylesheet" href="style.css">
 <style>
-:root {
-  --green: #3a6b35;
-  --green-light: #5a8f52;
-  --green-dark: #2a4f26;
-  --earth: #8b5e3c;
-  --cream: #f9f4ed;
-  --white: #ffffff;
-  --text: #2c2c2c;
-  --text-light: #666;
-  --gold: #c8963e;
+/* === HERO === */
+.hero {
+  min-height: 94vh;
+  background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 60%, var(--green-light) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: Georgia, serif; color: var(--text); background: var(--cream); line-height: 1.7; }
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  /* FOTO HERO: cambia 'hero-colline.png' con il nome della tua foto panoramica */
+  background-image: url('images/hero-colline.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.28;
+}
+.hero-content { position: relative; z-index: 1; max-width: 820px; }
+.location-pill {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.9);
+  padding: 6px 20px;
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  color: white;
+  line-height: 1.15;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+}
+.hero h1 em { color: var(--gold-light); font-style: normal; }
+.hero-sub {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: rgba(255,255,255,0.88);
+  margin-bottom: 32px;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.hero-badge-item {
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  backdrop-filter: blur(8px);
+}
 
-/* LANG BAR */
-.lang-bar { background: var(--green-dark); text-align: center; padding: 8px; position: sticky; top: 0; z-index: 1000; }
-.lang-bar button { background: none; border: 1px solid rgba(255,255,255,0.4); color: white; padding: 4px 14px; margin: 0 3px; border-radius: 20px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
-.lang-bar button.active, .lang-bar button:hover { background: var(--gold); border-color: var(--gold); }
+/* === INTRO SECTION === */
+.intro { background: white; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.intro-img img { width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg); }
+.intro-text h2 { font-size: 2rem; color: var(--green-dark); margin-bottom: 16px; }
+.intro-text p { color: var(--text-light); margin-bottom: 14px; font-size: 1.02rem; }
 
-/* NAV */
-nav { background: var(--green); padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
-.nav-logo { color: white; font-size: 22px; font-weight: bold; text-decoration: none; letter-spacing: 1px; }
-.nav-logo span { color: var(--gold); }
-.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; margin-left: 28px; font-size: 15px; transition: color 0.2s; }
-.nav-links a:hover { color: var(--gold); }
+/* === ANIMALS === */
+.animals { background: linear-gradient(135deg, var(--cream) 0%, #e8f4e6 100%); }
+.animals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+.animal-card {
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.animal-card:hover { transform: translateY(-5px); }
+.animal-card-img { height: 200px; overflow: hidden; }
+.animal-card-img img { width: 100%; height: 100%; object-fit: cover; }
+.animal-card-body { padding: 18px; }
+.animal-card-body h3 { color: var(--green-dark); font-size: 1.1rem; margin-bottom: 6px; }
+.animal-card-body p { color: var(--text-light); font-size: 0.88rem; }
 
-/* HERO */
-.hero { min-height: 92vh; background: linear-gradient(135deg, var(--green-dark), var(--green)); display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 20px; position: relative; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background-image: url('images/hero-colline.png'); background-size: cover; background-position: center; opacity: 0.3; }
-.hero-content { position: relative; z-index: 1; max-width: 800px; }
-.hero-badge { display: inline-block; background: var(--gold); color: white; padding: 6px 20px; border-radius: 30px; font-size: 13px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; }
-.hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); color: white; line-height: 1.2; margin-bottom: 20px; text-shadow: 0 2px 20px rgba(0,0,0,0.4); }
-.hero h1 em { color: var(--gold); font-style: normal; }
-.hero p { font-size: clamp(1rem, 2.5vw, 1.2rem); color: rgba(255,255,255,0.9); margin-bottom: 36px; max-width: 620px; margin-left: auto; margin-right: auto; }
-.btn { display: inline-block; background: var(--gold); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-size: 16px; font-weight: bold; transition: all 0.3s; box-shadow: 0 4px 20px rgba(200,150,62,0.4); margin: 8px; cursor: pointer; border: none; }
-.btn:hover { background: var(--earth); transform: translateY(-2px); }
-.btn-outline { background: transparent; border: 2px solid white; color: white; }
-.btn-outline:hover { background: white; color: var(--green-dark); }
-
-/* SECTIONS */
-section { padding: 80px 20px; }
-.container { max-width: 1100px; margin: 0 auto; }
-.section-title { text-align: center; margin-bottom: 60px; }
-.section-title h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); color: var(--green-dark); margin-bottom: 12px; }
-.section-title p { font-size: 1.05rem; color: var(--text-light); max-width: 600px; margin: 0 auto; }
-.divider { width: 60px; height: 3px; background: var(--gold); margin: 16px auto; border-radius: 3px; }
-
-/* MISSION */
-.mission { background: var(--green-dark); color: white; text-align: center; padding: 60px 20px; }
-.mission h2 { font-size: 1.8rem; margin-bottom: 16px; color: var(--gold); }
-.mission p { max-width: 720px; margin: 0 auto; font-size: 1.05rem; opacity: 0.92; line-height: 1.8; }
-
-/* EXPERIENCE CARDS */
-.experiences-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
-.exp-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; }
-.exp-card:hover { transform: translateY(-6px); box-shadow: 0 12px 35px rgba(0,0,0,0.15); }
-.exp-card-img { height: 210px; overflow: hidden; display: flex; align-items: center; justify-content: center; background: var(--green-light); font-size: 3rem; }
-.exp-card-img img { width: 100%; height: 100%; object-fit: cover; }
-.exp-card-body { padding: 24px; }
-.exp-card-body h3 { font-size: 1.2rem; color: var(--green-dark); margin-bottom: 10px; }
-.exp-card-body p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
-.exp-tag { display: inline-block; background: var(--cream); color: var(--green); padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-bottom: 12px; border: 1px solid var(--green-light); }
-
-/* STEPS */
-.steps { background: white; }
-.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px; }
-.step { text-align: center; padding: 32px 20px; }
-.step-number { width: 56px; height: 56px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: bold; margin: 0 auto 16px; }
-.step h3 { font-size: 1.1rem; color: var(--green-dark); margin-bottom: 10px; }
-.step p { color: var(--text-light); font-size: 0.95rem; }
-
-/* HAPPY */
-.happy-section { background: linear-gradient(135deg, var(--cream) 60%, #e8f0e6); }
-.happy-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.happy-inner img { border-radius: 20px; width: 100%; box-shadow: 0 10px 40px rgba(0,0,0,0.12); }
-.happy-text h2 { font-size: 2rem; color: var(--green-dark); margin-bottom: 16px; }
-.happy-text p { color: var(--text-light); margin-bottom: 14px; font-size: 1.02rem; }
-
-/* GALLERY */
-.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.gallery-grid img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; transition: transform 0.3s; cursor: pointer; }
-.gallery-grid img:hover { transform: scale(1.03); }
-.gallery-grid img:first-child { grid-column: span 2; height: 300px; }
-
-/* TARGETS */
-.targets { background: var(--green); color: white; }
-.targets .section-title h2 { color: white; }
-.targets .section-title p { color: rgba(255,255,255,0.8); }
-.targets-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
-.target-card { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 28px 22px; text-align: center; transition: background 0.3s; }
-.target-card:hover { background: rgba(255,255,255,0.18); }
-.target-card .icon { font-size: 2.5rem; margin-bottom: 14px; }
-.target-card h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--gold); }
-.target-card p { font-size: 0.93rem; opacity: 0.9; }
-
-/* TRANSPORT */
-.transport { background: var(--cream); text-align: center; }
-.transport-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 20px; }
-.transport-badge { display: inline-flex; align-items: center; gap: 10px; background: white; border: 2px solid var(--green-light); border-radius: 50px; padding: 12px 24px; font-size: 1rem; color: var(--green-dark); box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
-
-/* QUOTE */
+/* === QUOTE === */
 .quote-section { background: var(--earth); color: white; text-align: center; padding: 70px 20px; }
-.quote-section blockquote { font-size: clamp(1.4rem, 3vw, 2.1rem); font-style: italic; max-width: 700px; margin: 0 auto 16px; line-height: 1.5; }
+.quote-section blockquote { font-family: 'Playfair Display', serif; font-style: italic; font-size: clamp(1.4rem, 3.5vw, 2.2rem); max-width: 720px; margin: 0 auto 16px; line-height: 1.5; }
 .quote-section cite { opacity: 0.8; font-size: 1rem; }
 
-/* CONTACT */
-.contact { background: white; }
-.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
-.contact-info h2 { font-size: 1.8rem; color: var(--green-dark); margin-bottom: 20px; }
-.contact-info p { color: var(--text-light); margin-bottom: 24px; }
-.contact-item { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; padding: 14px; background: var(--cream); border-radius: 12px; }
-.contact-item .icon { font-size: 1.4rem; flex-shrink: 0; }
-.contact-item a { color: var(--green-dark); text-decoration: none; font-weight: bold; }
-.contact-item a:hover { color: var(--gold); }
-.form-wrapper iframe { width: 100%; min-height: 680px; border: none; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+/* === STEPS === */
+.steps { background: white; }
+.steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+.step { text-align: center; padding: 28px 16px; }
+.step-num { width: 52px; height: 52px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 700; margin: 0 auto 14px; font-family: 'Playfair Display', serif; }
+.step h3 { color: var(--green-dark); font-size: 1.05rem; margin-bottom: 8px; }
+.step p { color: var(--text-light); font-size: 0.92rem; }
 
-/* FOOTER */
-footer { background: var(--green-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 40px 20px; font-size: 14px; }
-footer a { color: var(--gold); text-decoration: none; }
-footer strong { color: white; }
-footer p { margin-bottom: 8px; }
+/* === SHUTTLE === */
+.shuttle { background: var(--cream); text-align: center; }
+.shuttle-badges { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.shuttle-badge { background: white; border: 2px solid var(--green-light); border-radius: 50px; padding: 10px 22px; font-size: 0.95rem; color: var(--green-dark); font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 
-/* LANG */
-[data-lang] { display: none; }
-[data-lang].active { display: block; }
-.il { display: none; }
-.il.active { display: inline; }
-
-/* RESPONSIVE */
+/* === RESPONSIVE === */
 @media (max-width: 768px) {
-  nav { padding: 14px 20px; }
-  .nav-links { display: none; }
-  .happy-inner { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .gallery-grid { grid-template-columns: 1fr 1fr; }
-  .gallery-grid img:first-child { grid-column: span 2; }
-}
-@media (max-width: 480px) {
-  .gallery-grid { grid-template-columns: 1fr; }
-  .gallery-grid img:first-child { grid-column: span 1; height: 220px; }
+  .intro-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -191,233 +158,199 @@ footer p { margin-bottom: 8px; }
 
 <!-- LANGUAGE BAR -->
 <div class="lang-bar">
-  <button onclick="setLang('it')" id="btn-it" class="active">🇮🇹 Italiano</button>
-  <button onclick="setLang('en')" id="btn-en">🇬🇧 English</button>
-  <button onclick="setLang('de')" id="btn-de">🇩🇪 Deutsch</button>
-  <button onclick="setLang('fr')" id="btn-fr">🇫🇷 Français</button>
+  <button onclick="setLang('it','index')" id="btn-it">🇮🇹 Italiano</button>
+  <button onclick="setLang('en','index')" id="btn-en">🇬🇧 English</button>
+  <button onclick="setLang('de','index')" id="btn-de">🇩🇪 Deutsch</button>
+  <button onclick="setLang('fr','index')" id="btn-fr">🇫🇷 Français</button>
 </div>
 
 <!-- NAV -->
 <nav>
-  <a href="#" class="nav-logo">Experience <span>Romagna</span></a>
-  <div class="nav-links" id="navlinks">
-    <a href="#esperienze">Esperienze</a>
-    <a href="#come-funziona">Come funziona</a>
-    <a href="#happy">Happy 🐶</a>
-    <a href="#contatti">Contatti</a>
+  <a href="index.html" class="nav-logo">Experience <span>Romagna</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-home active-page">Home</a>
+    <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+    <a href="missione.html" class="nav-missione">La Nostra Missione</a>
+    <a href="#contatti" class="nav-contatti">Contatti</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
   </div>
 </nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-home">Home</a>
+  <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+  <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+  <a href="missione.html" class="nav-missione">La Nostra Missione</a>
+  <a href="#contatti" class="nav-contatti">Contatti</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-    <div class="hero-badge">
+    <div class="location-pill">
       <span class="il active" data-li="it">Valle del Sorsa · Cesena · Romagna</span>
       <span class="il" data-li="en">Sorsa Valley · Cesena · Romagna, Italy</span>
       <span class="il" data-li="de">Sorsa-Tal · Cesena · Romagna, Italien</span>
       <span class="il" data-li="fr">Vallée du Sorsa · Cesena · Romagne, Italie</span>
     </div>
+
+    <div class="free-badge">
+      ✨ <span class="il active" data-li="it">100% Gratuito — Di Provvidenza</span>
+      <span class="il" data-li="en">100% Free — By Providence</span>
+      <span class="il" data-li="de">100% Kostenlos — Aus Vorsehung</span>
+      <span class="il" data-li="fr">100% Gratuit — Par Providence</span>
+    </div>
+
     <h1 data-lang="it" class="active">Vivi un Giorno<br><em>Autentico in Romagna</em></h1>
     <h1 data-lang="en">Live an<br><em>Authentic Day in Romagna</em></h1>
     <h1 data-lang="de">Erlebe einen<br><em>Authentischen Tag in der Romagna</em></h1>
     <h1 data-lang="fr">Vivez une<br><em>Journée Authentique en Romagne</em></h1>
-    <p data-lang="it" class="active">Vendemmia, cucina romagnola, orto biologico e trekking tra le colline di Cesena. A due passi dal mare, a un'esperienza di distanza dal resto del mondo.</p>
-    <p data-lang="en">Grape harvest, Romagna cooking, organic garden and trekking in the hills of Cesena. Minutes from the sea, a world away from the ordinary.</p>
-    <p data-lang="de">Weinlese, Romagna-Küche, Bio-Garten und Wandern in den Hügeln von Cesena. Minuten vom Meer — eine Welt weit weg vom Alltag.</p>
-    <p data-lang="fr">Vendange, cuisine de Romagne, jardin bio et randonnée dans les collines de Cesena. À deux pas de la mer, à une expérience du monde ordinaire.</p>
+
+    <p class="hero-sub" data-lang="it" class="active">Trekking nei calanchi, cucina romagnola, vigneto, orto biologico e animali nella Valle del Sorsa. Tutto gratuito, di provvidenza. A pochi chilometri dal mare.</p>
+    <p class="hero-sub" data-lang="en">Trekking in the badlands, Romagna cooking, vineyard, organic garden and animals in the Sorsa Valley. Completely free, by providence. A few km from the sea.</p>
+    <p class="hero-sub" data-lang="de">Wandern in den Calanchi, Romagna-Küche, Weinberg, Bio-Garten und Tiere im Sorsa-Tal. Völlig kostenlos, aus Vorsehung. Wenige km vom Meer entfernt.</p>
+    <p class="hero-sub" data-lang="fr">Randonnée dans les calanchi, cuisine romagnole, vignoble, jardin bio et animaux dans la Vallée du Sorsa. Entièrement gratuit, par providence. À quelques km de la mer.</p>
+
+    <div class="hero-badges">
+      <span class="hero-badge-item">🥾 Trekking</span>
+      <span class="hero-badge-item">🍷 <span class="il active" data-li="it">Vigneto</span><span class="il" data-li="en">Vineyard</span><span class="il" data-li="de">Weinberg</span><span class="il" data-li="fr">Vignoble</span></span>
+      <span class="hero-badge-item">🧑‍🍳 <span class="il active" data-li="it">Cucina</span><span class="il" data-li="en">Cooking</span><span class="il" data-li="de">Kochen</span><span class="il" data-li="fr">Cuisine</span></span>
+      <span class="hero-badge-item">🌱 <span class="il active" data-li="it">Orto Bio</span><span class="il" data-li="en">Organic Garden</span><span class="il" data-li="de">Bio-Garten</span><span class="il" data-li="fr">Jardin Bio</span></span>
+      <span class="hero-badge-item">🐶 Happy & Stella</span>
+    </div>
+
     <div>
-      <a href="#contatti" class="btn" id="cta1">Prenota la tua Esperienza</a>
-      <a href="#esperienze" class="btn btn-outline" id="cta2">Scopri le Esperienze</a>
+      <a href="#contatti" class="btn" id="cta1">Prenota Gratis</a>
+      <a href="percorsi.html" class="btn btn-outline" id="cta2">Scopri le Esperienze</a>
     </div>
   </div>
 </section>
 
-<!-- MISSION -->
+<!-- MISSION BANNER -->
 <div class="mission">
-  <h2>🌍 <span class="il active" data-li="it">Il nostro impegno</span><span class="il" data-li="en">Our Commitment</span><span class="il" data-li="de">Unser Engagement</span><span class="il" data-li="fr">Notre Engagement</span></h2>
-  <p data-lang="it" class="active">Experience Romagna è un progetto di <strong>Peace and Good People ODV</strong>, un'associazione di volontariato senza scopo di lucro. Il ricavato delle esperienze è interamente destinato a <strong>missioni umanitarie in Africa</strong> e a <strong>progetti sociali in Italia</strong>. Quando visiti la Romagna con noi, contribuisci a cambiare il mondo.</p>
-  <p data-lang="en">Experience Romagna is a project of <strong>Peace and Good People ODV</strong>, a non-profit volunteer association. All proceeds go entirely to <strong>humanitarian missions in Africa</strong> and <strong>social projects in Italy</strong>. When you visit Romagna with us, you help change the world.</p>
-  <p data-lang="de">Experience Romagna ist ein Projekt von <strong>Peace and Good People ODV</strong>, einem gemeinnützigen Freiwilligenverein. Alle Einnahmen fließen vollständig in <strong>humanitäre Missionen in Afrika</strong> und <strong>soziale Projekte in Italien</strong>. Wenn Sie die Romagna mit uns besuchen, helfen Sie, die Welt zu verändern.</p>
-  <p data-lang="fr">Experience Romagna est un projet de <strong>Peace and Good People ODV</strong>, une association bénévole à but non lucratif. Toutes les recettes vont entièrement aux <strong>missions humanitaires en Afrique</strong> et aux <strong>projets sociaux en Italie</strong>. En visitant la Romagne avec nous, vous contribuez à changer le monde.</p>
+  <h2>🌍 <span class="il active" data-li="it">Tutto Gratuito — Di Provvidenza</span><span class="il" data-li="en">Completely Free — By Providence</span><span class="il" data-li="de">Völlig Kostenlos — Aus Vorsehung</span><span class="il" data-li="fr">Entièrement Gratuit — Par Providence</span></h2>
+  <p data-lang="it" class="active">Experience Romagna è un progetto di <strong>Peace and Good People ODV</strong>, un'associazione di volontariato che opera di provvidenza. Tutte le esperienze sono <strong>completamente gratuite</strong>. Non esiste un listino prezzi, non c'è un biglietto da pagare. Chi vuole, può scegliere liberamente di fare una donazione per sostenere la nostra missione.</p>
+  <p data-lang="en">Experience Romagna is a project of <strong>Peace and Good People ODV</strong>, a volunteer association that operates by providence. All experiences are <strong>completely free</strong>. There is no price list, no ticket to buy. Those who wish can freely choose to donate to support our mission.</p>
+  <p data-lang="de">Experience Romagna ist ein Projekt von <strong>Peace and Good People ODV</strong>, einem Freiwilligenverein, der aus Vorsehung arbeitet. Alle Erlebnisse sind <strong>völlig kostenlos</strong>. Es gibt keine Preisliste, keine Eintrittskarte. Wer möchte, kann frei wählen, unsere Mission zu unterstützen.</p>
+  <p data-lang="fr">Experience Romagna est un projet de <strong>Peace and Good People ODV</strong>, une association bénévole qui fonctionne par providence. Toutes les expériences sont <strong>entièrement gratuites</strong>. Il n'y a pas de liste de prix, pas de billet à acheter. Ceux qui le souhaitent peuvent librement choisir de faire un don.</p>
+  <p style="margin-top:16px;">
+    <a href="missione.html" class="btn btn-outline btn-sm">
+      <span class="il active" data-li="it">Scopri la nostra Missione →</span>
+      <span class="il" data-li="en">Discover our Mission →</span>
+      <span class="il" data-li="de">Unsere Mission entdecken →</span>
+      <span class="il" data-li="fr">Découvrir notre Mission →</span>
+    </a>
+  </p>
 </div>
 
-<!-- EXPERIENCES -->
-<section id="esperienze" style="background: var(--cream);">
+<!-- INTRO -->
+<section class="intro">
   <div class="container">
-    <div class="section-title">
-      <h2 data-lang="it" class="active">Le Nostre Esperienze</h2>
-      <h2 data-lang="en">Our Experiences</h2>
-      <h2 data-lang="de">Unsere Erlebnisse</h2>
-      <h2 data-lang="fr">Nos Expériences</h2>
-      <div class="divider"></div>
-      <p data-lang="it" class="active">Ogni giornata è diversa, ogni stagione offre qualcosa di unico. Scegli una o più esperienze e combinale come vuoi — ogni giorno è progettato su misura per te.</p>
-      <p data-lang="en">Every day is different, every season offers something unique. Choose one or more experiences and mix them as you like — every day is tailor-made for you.</p>
-      <p data-lang="de">Jeder Tag ist anders, jede Jahreszeit bietet etwas Einzigartiges. Wählen Sie ein oder mehrere Erlebnisse und kombinieren Sie sie nach Belieben.</p>
-      <p data-lang="fr">Chaque jour est différent, chaque saison offre quelque chose d'unique. Choisissez une ou plusieurs expériences et combinez-les comme vous le souhaitez.</p>
-    </div>
-    <div class="experiences-grid">
+    <div class="intro-grid">
+      <div class="intro-img">
+        <!-- FOTO: panorama colline / selfie coppia -->
+        <img src="images/selfie-colline.png" alt="Coppia nella Valle del Sorsa, Cesena, Romagna">
+      </div>
+      <div class="intro-text">
+        <h2 data-lang="it" class="active">La Valle del Sorsa:<br>la Romagna vera</h2>
+        <h2 data-lang="en">The Sorsa Valley:<br>the real Romagna</h2>
+        <h2 data-lang="de">Das Sorsa-Tal:<br>das echte Romagna</h2>
+        <h2 data-lang="fr">La Vallée du Sorsa :<br>la vraie Romagne</h2>
 
-      <article class="exp-card">
-        <div class="exp-card-img"><img src="images/orto.png" alt="Orto biologico Valle del Sorsa Romagna" loading="lazy"></div>
-        <div class="exp-card-body">
-          <span class="exp-tag">🌱 <span class="il active" data-li="it">Primavera – Estate – Autunno</span><span class="il" data-li="en">Spring – Summer – Autumn</span><span class="il" data-li="de">Frühling – Sommer – Herbst</span><span class="il" data-li="fr">Printemps – Été – Automne</span></span>
-          <h3 data-lang="it" class="active">🌱 L'Orto Biologico</h3>
-          <h3 data-lang="en">🌱 The Organic Garden</h3>
-          <h3 data-lang="de">🌱 Der Bio-Garten</h3>
-          <h3 data-lang="fr">🌱 Le Jardin Biologique</h3>
-          <p data-lang="it" class="active">Impara i segreti della coltivazione biologica, dalla preparazione del terreno alla raccolta di pomodori, zucchine e lattuga. Torni a casa con le verdure che hai raccolto tu stesso.</p>
-          <p data-lang="en">Learn the secrets of organic farming, from soil preparation to harvesting tomatoes, zucchini and lettuce. Go home with the vegetables you picked yourself.</p>
-          <p data-lang="de">Lernen Sie die Geheimnisse des Bio-Anbaus — von der Bodenvorbereitung bis zur Ernte von Tomaten, Zucchini und Salat. Gehen Sie mit dem selbst gepflückten Gemüse nach Hause.</p>
-          <p data-lang="fr">Apprenez les secrets de l'agriculture biologique, de la préparation du sol à la récolte des tomates, courgettes et laitue. Rentrez avec les légumes que vous avez cueillis vous-même.</p>
-        </div>
-      </article>
+        <p data-lang="it" class="active">A pochi chilometri dalla Riviera Romagnola, nella dolce campagna di Cesena, si apre un mondo rimasto autentico. La Valle del Sorsa è un angolo di Romagna profonda: calanchi, vigneti di Sangiovese, oliveti, orti biologici, chiese romaniche e sentieri che profumano di timo.</p>
+        <p data-lang="en">A few kilometers from the Romagna Riviera, in the gentle countryside of Cesena, a world that has remained authentic opens up. The Sorsa Valley is a corner of deep Romagna: badlands, Sangiovese vineyards, olive groves, organic gardens, Romanesque churches and paths that smell of thyme.</p>
+        <p data-lang="de">Wenige Kilometer von der Romagna Riviera entfernt, in der sanften Landschaft von Cesena, öffnet sich eine Welt, die authentisch geblieben ist. Das Sorsa-Tal ist eine Ecke des tiefen Romagna: Calanchi, Sangiovese-Weinberge, Olivenhaine, Bio-Gärten, romanische Kirchen und Pfade, die nach Thymian duften.</p>
+        <p data-lang="fr">À quelques kilomètres de la Riviera de Romagne, dans la douce campagne de Cesena, s'ouvre un monde resté authentique. La Vallée du Sorsa est un coin de Romagne profonde : calanchi, vignobles de Sangiovese, oliveraies, jardins biologiques, églises romanes et sentiers qui sentent le thym.</p>
 
-      <article class="exp-card">
-        <div class="exp-card-img"><img src="images/vigneto.png" alt="Vendemmia vigneto Sangiovese Romagna" loading="lazy"></div>
-        <div class="exp-card-body">
-          <span class="exp-tag">🍇 <span class="il active" data-li="it">Estate – Autunno</span><span class="il" data-li="en">Summer – Autumn</span><span class="il" data-li="de">Sommer – Herbst</span><span class="il" data-li="fr">Été – Automne</span></span>
-          <h3 data-lang="it" class="active">🍇 Il Vigneto e la Vendemmia</h3>
-          <h3 data-lang="en">🍇 The Vineyard & Grape Harvest</h3>
-          <h3 data-lang="de">🍇 Weinberg & Weinlese</h3>
-          <h3 data-lang="fr">🍇 Le Vignoble et les Vendanges</h3>
-          <p data-lang="it" class="active">Un viaggio nel mondo del Sangiovese: passeggiata tra i filari, visita alla cantina storica, degustazione guidata. E il ritorno dal vigneto più lontano? In trattore!</p>
-          <p data-lang="en">A journey into the world of Sangiovese: walk through the vineyard rows, visit the historic cellar, guided tasting. And the ride back from the furthest vineyard? On a tractor!</p>
-          <p data-lang="de">Eine Reise in die Welt des Sangiovese: Spaziergang durch die Weinreihen, Besuch des historischen Kellers, Weinverkostung. Und die Rückfahrt? Mit dem Traktor!</p>
-          <p data-lang="fr">Un voyage dans le monde du Sangiovese : balade entre les vignes, visite de la cave, dégustation guidée. Et le retour du vignoble le plus éloigné ? En tracteur !</p>
-        </div>
-      </article>
+        <p data-lang="it" class="active">Qui non troverai un agriturismo turistico. Troverai una famiglia, un orto vero, un vino vero, dei cani felici e persone che credono che la bellezza della vita si condivide — <strong>gratuitamente</strong>.</p>
+        <p data-lang="en">Here you won't find a tourist farmhouse. You'll find a family, a real garden, real wine, happy dogs and people who believe that the beauty of life is shared — <strong>for free</strong>.</p>
+        <p data-lang="de">Hier finden Sie keinen touristischen Bauernhof. Sie finden eine Familie, einen echten Garten, echten Wein, glückliche Hunde und Menschen, die glauben, dass die Schönheit des Lebens geteilt wird — <strong>kostenlos</strong>.</p>
+        <p data-lang="fr">Ici, vous ne trouverez pas une ferme touristique. Vous trouverez une famille, un vrai jardin, un vrai vin, des chiens heureux et des personnes qui croient que la beauté de la vie se partage — <strong>gratuitement</strong>.</p>
 
-      <article class="exp-card">
-        <div class="exp-card-img" style="font-size:3.5rem;">🫒</div>
-        <div class="exp-card-body">
-          <span class="exp-tag">🫒 <span class="il active" data-li="it">Autunno – Inverno</span><span class="il" data-li="en">Autumn – Winter</span><span class="il" data-li="de">Herbst – Winter</span><span class="il" data-li="fr">Automne – Hiver</span></span>
-          <h3 data-lang="it" class="active">🫒 L'Oliveto: l'Oro Liquido</h3>
-          <h3 data-lang="en">🫒 The Olive Grove: Liquid Gold</h3>
-          <h3 data-lang="de">🫒 Der Olivenhain: Flüssiges Gold</h3>
-          <h3 data-lang="fr">🫒 L'Oliveraie : l'Or Liquide</h3>
-          <p data-lang="it" class="active">Scopri gli ulivi secolari della Valle del Sorsa e il loro extravergine dal sapore unico. Degustazione finale con olio appena franto su pane caldo di Romagna.</p>
-          <p data-lang="en">Discover the ancient olive trees of the Sorsa Valley and their uniquely flavored extra virgin oil. Final tasting of freshly pressed oil on warm Romagna bread.</p>
-          <p data-lang="de">Entdecken Sie die alten Olivenbäume des Sorsa-Tals und ihr einzigartiges natives Olivenöl extra. Abschließende Verkostung auf warmem Romagna-Brot.</p>
-          <p data-lang="fr">Découvrez les oliviers anciens de la Vallée du Sorsa et leur huile d'olive extra vierge au goût unique. Dégustation finale sur du pain chaud de Romagne.</p>
-        </div>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-card-img"><img src="images/cucina.png" alt="Cooking class pasta fresca tagliatelle cappelletti Romagna" loading="lazy"></div>
-        <div class="exp-card-body">
-          <span class="exp-tag">🧑‍🍳 <span class="il active" data-li="it">Tutto l'anno</span><span class="il" data-li="en">All year round</span><span class="il" data-li="de">Ganzjährig</span><span class="il" data-li="fr">Toute l'année</span></span>
-          <h3 data-lang="it" class="active">🧑‍🍳 La Cucina Romagnola</h3>
-          <h3 data-lang="en">🧑‍🍳 Romagna Cooking Class</h3>
-          <h3 data-lang="de">🧑‍🍳 Romagna Kochkurs</h3>
-          <h3 data-lang="fr">🧑‍🍳 Cours de Cuisine Romagnole</h3>
-          <p data-lang="it" class="active">Impara a tirare la sfoglia a mano: tagliatelle, cappelletti, strozzapreti, passatelli, piadina e crescioni. Raccogliamo le uova dal pollaio, cuciniamo e mangiamo tutto insieme!</p>
-          <p data-lang="en">Learn to hand-roll sfoglia: tagliatelle, cappelletti, strozzapreti, passatelli, piadina. We collect eggs from the henhouse, then cook and eat everything together!</p>
-          <p data-lang="de">Lernen Sie, Sfoglia von Hand auszurollen: Tagliatelle, Cappelletti, Strozzapreti, Passatelli, Piadina. Wir sammeln Eier, kochen und essen dann alles zusammen!</p>
-          <p data-lang="fr">Apprenez à étaler la sfoglia à la main : tagliatelles, cappelletti, strozzapreti, passatelli, piadina. On collecte les œufs, on cuisine et on mange tout ensemble !</p>
-        </div>
-      </article>
-
-      <article class="exp-card">
-        <div class="exp-card-img"><img src="images/trekking.png" alt="Trekking calanchi Valle del Sorsa Cesena panorama" loading="lazy"></div>
-        <div class="exp-card-body">
-          <span class="exp-tag">🚶 <span class="il active" data-li="it">Tutto l'anno</span><span class="il" data-li="en">All year round</span><span class="il" data-li="de">Ganzjährig</span><span class="il" data-li="fr">Toute l'année</span></span>
-          <h3 data-lang="it" class="active">🚶 Trekking nei Calanchi</h3>
-          <h3 data-lang="en">🚶 Trekking in the Badlands</h3>
-          <h3 data-lang="de">🚶 Wandern in den Calanchi</h3>
-          <h3 data-lang="fr">🚶 Randonnée dans les Calanchi</h3>
-          <p data-lang="it" class="active">Una passeggiata guidata tra i calanchi, i laghi e i panorami della Valle del Sorsa. Visita alla chiesa di San Sisto e a LuogoRaro: luoghi carichi di storia e leggende.</p>
-          <p data-lang="en">A guided walk through the badlands, lakes and views of the Sorsa Valley. Visit to the church of San Sisto and LuogoRaro: places full of history and legends.</p>
-          <p data-lang="de">Ein geführter Spaziergang durch die Calanchi, Seen und Aussichten des Sorsa-Tals. Besuch der Kirche San Sisto und LuogoRaro: Orte voller Geschichte und Legenden.</p>
-          <p data-lang="fr">Une promenade guidée à travers les calanchi, lacs et panoramas de la Vallée du Sorsa. Visite de l'église San Sisto et de LuogoRaro : lieux chargés d'histoire et de légendes.</p>
-        </div>
-      </article>
-
-      <article class="exp-card" style="background: linear-gradient(135deg, var(--green-dark), var(--green)); color: white;">
-        <div class="exp-card-img" style="background: rgba(255,255,255,0.1); font-size:3.5rem;">✨</div>
-        <div class="exp-card-body">
-          <span class="exp-tag" style="background:rgba(255,255,255,0.2); color:white; border-color:transparent;">
-            <span class="il active" data-li="it">La tua giornata su misura</span>
-            <span class="il" data-li="en">Your tailor-made day</span>
-            <span class="il" data-li="de">Ihr maßgeschneiderter Tag</span>
-            <span class="il" data-li="fr">Votre journée sur mesure</span>
-          </span>
-          <h3 style="color:var(--gold);" data-lang="it" class="active">✨ Crea il tuo Mix Perfetto</h3>
-          <h3 style="color:var(--gold);" data-lang="en">✨ Create Your Perfect Mix</h3>
-          <h3 style="color:var(--gold);" data-lang="de">✨ Erstelle deinen perfekten Mix</h3>
-          <h3 style="color:var(--gold);" data-lang="fr">✨ Créez votre Mix Parfait</h3>
-          <p style="color:rgba(255,255,255,0.88);" data-lang="it" class="active">Addio al celibato, compleanni, famiglie, team building… combina tutte le esperienze che vuoi. Ogni giornata è unica e progettata insieme a te.</p>
-          <p style="color:rgba(255,255,255,0.88);" data-lang="en">Bachelor parties, birthdays, families, team building… combine all experiences you want. Every day is unique and designed together with you.</p>
-          <p style="color:rgba(255,255,255,0.88);" data-lang="de">Junggesellenabschiede, Geburtstage, Familien, Teambuilding… kombinieren Sie alle Erlebnisse nach Wunsch. Jeder Tag ist einzigartig und wird gemeinsam mit Ihnen gestaltet.</p>
-          <p style="color:rgba(255,255,255,0.88);" data-lang="fr">EVJF, anniversaires, familles, team building… combinez toutes les expériences souhaitées. Chaque journée est unique et conçue avec vous.</p>
-        </div>
-      </article>
-
+        <a href="percorsi.html" class="btn btn-green" style="margin-top:8px;">
+          <span class="il active" data-li="it">Vedi tutti i percorsi →</span>
+          <span class="il" data-li="en">See all trails →</span>
+          <span class="il" data-li="de">Alle Wege sehen →</span>
+          <span class="il" data-li="fr">Voir tous les parcours →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- TARGET GROUPS -->
-<section class="targets">
+<!-- ANIMALS -->
+<section class="animals">
   <div class="container">
     <div class="section-title">
-      <h2 data-lang="it" class="active">Per Chi è questa Avventura?</h2>
-      <h2 data-lang="en">Who Is This Adventure For?</h2>
-      <h2 data-lang="de">Für wen ist dieses Abenteuer?</h2>
-      <h2 data-lang="fr">Pour Qui est cette Aventure ?</h2>
+      <h2 data-lang="it" class="active">🐾 La Famiglia che ti Aspetta</h2>
+      <h2 data-lang="en">🐾 The Family Waiting for You</h2>
+      <h2 data-lang="de">🐾 Die Familie, die auf Sie wartet</h2>
+      <h2 data-lang="fr">🐾 La Famille qui vous Attend</h2>
       <div class="divider"></div>
+      <p data-lang="it" class="active">Non siamo soli. Abbiamo una famiglia a quattro zampe che ti accoglierà con tutto il calore del mondo.</p>
+      <p data-lang="en">We are not alone. We have a four-legged family that will welcome you with all the warmth in the world.</p>
+      <p data-lang="de">Wir sind nicht allein. Wir haben eine vierbeinige Familie, die Sie mit aller Wärme der Welt empfangen wird.</p>
+      <p data-lang="fr">Nous ne sommes pas seuls. Nous avons une famille à quatre pattes qui vous accueillera avec toute la chaleur du monde.</p>
     </div>
-    <div class="targets-grid">
-      <div class="target-card">
-        <div class="icon">🍾</div>
-        <h3 data-lang="it" class="active">Addio al Celibato/Nubilato</h3>
-        <h3 data-lang="en">Bachelor / Bachelorette Party</h3>
-        <h3 data-lang="de">Junggesellenabschied</h3>
-        <h3 data-lang="fr">EVJF / EVG</h3>
-        <p data-lang="it" class="active">Dimentica i soliti clichés! Un giorno tra i vigneti con i tuoi amici, mani nella terra, bicchiere di vino e risate. Un'esperienza che si racconta per anni.</p>
-        <p data-lang="en">Forget the usual clichés! A day in the vineyards with your friends, hands in the dirt, wine in hand and laughter everywhere. An experience you'll talk about for years.</p>
-        <p data-lang="de">Vergessen Sie die üblichen Klischees! Ein Tag in den Weinbergen mit Ihren Freunden, Hände im Dreck, Wein in der Hand und Gelächter überall.</p>
-        <p data-lang="fr">Oubliez les clichés habituels ! Une journée dans les vignes avec vos amis, les mains dans la terre, le verre à la main et des rires partout.</p>
+    <div class="animals-grid">
+
+      <div class="animal-card">
+        <!-- FOTO: happy.png → Happy primo piano -->
+        <div class="animal-card-img"><img src="images/happy.png" alt="Happy cane bianco mascotte Experience Romagna Valle del Sorsa" loading="lazy"></div>
+        <div class="animal-card-body">
+          <h3>🐶 Happy</h3>
+          <p data-lang="it" class="active"><strong>Direttore del Benvenuto.</strong> Bianco, soffice, innamorato di tutti. Sarà il primo ad accoglierti e l'ultimo a lasciarti andare.</p>
+          <p data-lang="en"><strong>Director of Welcoming.</strong> White, fluffy, in love with everyone. He'll be the first to greet you and the last to let you go.</p>
+          <p data-lang="de"><strong>Begrüßungsdirektor.</strong> Weiß, flauschig, in jeden verliebt. Er wird der erste sein, der Sie begrüßt und der letzte, der Sie gehen lässt.</p>
+          <p data-lang="fr"><strong>Directeur de l'Accueil.</strong> Blanc, moelleux, amoureux de tout le monde. Il sera le premier à vous accueillir et le dernier à vous laisser partir.</p>
+        </div>
       </div>
-      <div class="target-card">
-        <div class="icon">👨‍👩‍👧‍👦</div>
-        <h3 data-lang="it" class="active">Famiglie con Bambini</h3>
-        <h3 data-lang="en">Families with Children</h3>
-        <h3 data-lang="de">Familien mit Kindern</h3>
-        <h3 data-lang="fr">Familles avec Enfants</h3>
-        <p data-lang="it" class="active">Vedete la gioia nei loro occhi quando raccolgono un uovo ancora caldo o imparano a fare la piadina. Un giorno per ritrovare la natura e soprattutto ritrovarsi.</p>
-        <p data-lang="en">See the joy in their eyes as they collect a still-warm egg or knead their first piadina. A day to reconnect with nature and most importantly with each other.</p>
-        <p data-lang="de">Sehen Sie die Freude in ihren Augen, wenn sie ein noch warmes Ei sammeln oder ihre erste Piadina kneten. Ein Tag, um die Natur wiederzuentdecken.</p>
-        <p data-lang="fr">Voyez la joie dans leurs yeux quand ils collectent un œuf encore chaud ou pétrissent leur première piadina. Une journée pour renouer avec la nature.</p>
+
+      <div class="animal-card">
+        <!-- FOTO: happy-stella.png → Happy e Stella sui calanchi -->
+        <div class="animal-card-img"><img src="images/happy-stella.png" alt="Stella cane bianco figlia di Happy Valle del Sorsa calanchi Cesena" loading="lazy"></div>
+        <div class="animal-card-body">
+          <h3>🐶 Stella</h3>
+          <p data-lang="it" class="active"><strong>Figlia di Happy.</strong> Incrocio con una maremmana bianca. Energica, curiosa, ama i sentieri e le avventure. In cammino sui calanchi con lei è un'esperienza indimenticabile.</p>
+          <p data-lang="en"><strong>Happy's daughter.</strong> Crossed with a white Maremma sheepdog. Energetic, curious, loves trails and adventures. Walking in the badlands with her is an unforgettable experience.</p>
+          <p data-lang="de"><strong>Happys Tochter.</strong> Kreuzung mit einem weißen Maremma-Schäferhund. Energisch, neugierig, liebt Wege und Abenteuer. Mit ihr in den Calanchi zu wandern ist ein unvergessliches Erlebnis.</p>
+          <p data-lang="fr"><strong>La fille d'Happy.</strong> Croisée avec un chien de berger des Maremmes blanc. Énergique, curieuse, elle adore les sentiers et les aventures. Se promener dans les calanchi avec elle est une expérience inoubliable.</p>
+        </div>
       </div>
-      <div class="target-card">
-        <div class="icon">🌍</div>
-        <h3 data-lang="it" class="active">Turisti dalla Costa</h3>
-        <h3 data-lang="en">Tourists from the Coast</h3>
-        <h3 data-lang="de">Touristen von der Küste</h3>
-        <h3 data-lang="fr">Touristes de la Côte</h3>
-        <p data-lang="it" class="active">Sei in vacanza sulla Riviera Romagnola? Vieni a scoprire la vera anima della Romagna, a pochi km dal mare. Shuttle gratuito da Cesenatico, Cervia e Bellaria.</p>
-        <p data-lang="en">On holiday on the Romagna Riviera? Come discover the true soul of Romagna, just a few km from the sea. Free shuttle from Cesenatico, Cervia and Bellaria.</p>
-        <p data-lang="de">Im Urlaub an der Romagna Riviera? Entdecken Sie die wahre Seele der Romagna, nur wenige km vom Meer. Kostenloser Shuttle von Cesenatico, Cervia und Bellaria.</p>
-        <p data-lang="fr">En vacances sur la Riviera de Romagne ? Venez découvrir la vraie âme de la Romagne, à quelques km de la mer. Navette gratuite depuis Cesenatico, Cervia et Bellaria.</p>
+
+      <div class="animal-card">
+        <!-- FOTO: nina.png → gatta Nina nera -->
+        <div class="animal-card-img"><img src="images/nina.png" alt="Nina gatta nera Experience Romagna" loading="lazy"></div>
+        <div class="animal-card-body">
+          <h3>🐱 Nina</h3>
+          <p data-lang="it" class="active"><strong>La filosofa nera.</strong> Occhi gialli sorprendenti, carattere riservato ma curioso. Si lascia avvicinare quando decide lei. Un incontro speciale.</p>
+          <p data-lang="en"><strong>The black philosopher.</strong> Surprising yellow eyes, reserved but curious character. She lets you approach when she decides. A special encounter.</p>
+          <p data-lang="de"><strong>Die schwarze Philosophin.</strong> Überraschende gelbe Augen, reservierter aber neugieriger Charakter. Sie lässt sich nähern, wenn sie es entscheidet. Eine besondere Begegnung.</p>
+          <p data-lang="fr"><strong>La philosophe noire.</strong> Yeux jaunes surprenants, caractère réservé mais curieux. Elle se laisse approcher quand elle le décide. Une rencontre spéciale.</p>
+        </div>
       </div>
-      <div class="target-card">
-        <div class="icon">🏢</div>
-        <h3 data-lang="it" class="active">Team Building Aziendale</h3>
-        <h3 data-lang="en">Corporate Team Building</h3>
-        <h3 data-lang="de">Firmen-Teambuilding</h3>
-        <h3 data-lang="fr">Team Building d'Entreprise</h3>
-        <p data-lang="it" class="active">Cucinare insieme crea legami veri. Un'esperienza autentica per rafforzare il team lontano dall'ufficio. E il ricavato va in beneficienza!</p>
-        <p data-lang="en">Cooking together builds real bonds. An authentic experience to strengthen your team away from the office. And the proceeds go to charity!</p>
-        <p data-lang="de">Gemeinsames Kochen schafft echte Bindungen. Ein authentisches Erlebnis für Ihr Team außerhalb des Büros. Und der Erlös geht an wohltätige Zwecke!</p>
-        <p data-lang="fr">Cuisiner ensemble crée de vrais liens. Une expérience authentique pour renforcer votre équipe loin du bureau. Et les bénéfices vont à des œuvres caritatives !</p>
+
+      <div class="animal-card">
+        <!-- FOTO: pinta.png → gatta Pinta tigrata -->
+        <div class="animal-card-img"><img src="images/pinta.png" alt="Pinta gatta tigrata Experience Romagna Valle del Sorsa" loading="lazy"></div>
+        <div class="animal-card-body">
+          <h3>🐱 Pinta</h3>
+          <p data-lang="it" class="active"><strong>La guardiana del fienile.</strong> Tigrata, saggia, preferisce osservare dall'alto. Regna indisturbata tra i travi della sua torre personale.</p>
+          <p data-lang="en"><strong>The barn guardian.</strong> Tabby, wise, prefers to observe from above. She reigns undisturbed among the beams of her personal tower.</p>
+          <p data-lang="de"><strong>Die Scheunen-Wächterin.</strong> Getigert, weise, beobachtet lieber von oben. Sie herrscht ungestört zwischen den Balken ihres persönlichen Turms.</p>
+          <p data-lang="fr"><strong>La gardienne de la grange.</strong> Tigrée, sage, préfère observer d'en haut. Elle règne sans être dérangée parmi les poutres de sa tour personnelle.</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
 <!-- HOW IT WORKS -->
-<section class="steps" id="come-funziona">
+<section class="steps">
   <div class="container">
     <div class="section-title">
       <h2 data-lang="it" class="active">Come Funziona la Tua Giornata</h2>
@@ -428,71 +361,59 @@ footer p { margin-bottom: 8px; }
     </div>
     <div class="steps-grid">
       <div class="step">
-        <div class="step-number">1</div>
-        <h3 data-lang="it" class="active">🚌 Pickup senza stress</h3>
-        <h3 data-lang="en">🚌 Stress-free Pickup</h3>
-        <h3 data-lang="de">🚌 Stressfreie Abholung</h3>
-        <h3 data-lang="fr">🚌 Prise en charge sans stress</h3>
-        <p data-lang="it" class="active">Shuttle gratuito su richiesta da Cesenatico, Cervia, Pinarella, Bellaria e Cesena. Il relax inizia dal momento in cui parti.</p>
-        <p data-lang="en">Free shuttle on request from Cesenatico, Cervia, Pinarella, Bellaria and Cesena. Relaxation starts from the moment you set off.</p>
-        <p data-lang="de">Kostenloser Shuttle auf Anfrage von Cesenatico, Cervia, Pinarella, Bellaria und Cesena.</p>
-        <p data-lang="fr">Navette gratuite sur demande depuis Cesenatico, Cervia, Pinarella, Bellaria et Cesena.</p>
+        <div class="step-num">1</div>
+        <h3 data-lang="it" class="active">📩 Contattaci</h3>
+        <h3 data-lang="en">📩 Contact Us</h3>
+        <h3 data-lang="de">📩 Kontaktiere uns</h3>
+        <h3 data-lang="fr">📩 Contactez-nous</h3>
+        <p data-lang="it" class="active">Scrivici su WhatsApp o via email. Parliamo della tua giornata ideale, del tuo gruppo, delle tue preferenze.</p>
+        <p data-lang="en">Write to us on WhatsApp or email. Let's talk about your ideal day, your group, your preferences.</p>
+        <p data-lang="de">Schreib uns auf WhatsApp oder per E-Mail. Lass uns über deinen idealen Tag sprechen.</p>
+        <p data-lang="fr">Écrivez-nous sur WhatsApp ou par email. Parlons de votre journée idéale, de votre groupe.</p>
       </div>
       <div class="step">
-        <div class="step-number">2</div>
-        <h3 data-lang="it" class="active">🥂 Accoglienza speciale</h3>
-        <h3 data-lang="en">🥂 Special Welcome</h3>
+        <div class="step-num">2</div>
+        <h3 data-lang="it" class="active">🚌 Shuttle gratuito</h3>
+        <h3 data-lang="en">🚌 Free shuttle</h3>
+        <h3 data-lang="de">🚌 Kostenloser Shuttle</h3>
+        <h3 data-lang="fr">🚌 Navette gratuite</h3>
+        <p data-lang="it" class="active">Su richiesta organizziamo il trasporto da Cesenatico, Cervia, Pinarella, Bellaria e Cesena. Il relax inizia subito.</p>
+        <p data-lang="en">On request we organize transport from Cesenatico, Cervia, Pinarella, Bellaria and Cesena. Relaxation starts right away.</p>
+        <p data-lang="de">Auf Anfrage organisieren wir den Transport von Cesenatico, Cervia, Pinarella, Bellaria und Cesena.</p>
+        <p data-lang="fr">Sur demande, nous organisons le transport depuis Cesenatico, Cervia, Pinarella, Bellaria et Cesena.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3 data-lang="it" class="active">🥂 Benvenuto speciale</h3>
+        <h3 data-lang="en">🥂 Special welcome</h3>
         <h3 data-lang="de">🥂 Besonderer Empfang</h3>
-        <h3 data-lang="fr">🥂 Accueil Spécial</h3>
-        <p data-lang="it" class="active">Arrivi nella Valle del Sorsa con un bicchiere di vino e stuzzichini locali. E Happy ti accoglierà subito come il suo nuovo migliore amico!</p>
-        <p data-lang="en">You arrive in the Sorsa Valley with a glass of wine and local snacks. And Happy will immediately welcome you as his new best friend!</p>
-        <p data-lang="de">Sie kommen im Sorsa-Tal mit einem Glas Wein und lokalen Snacks an. Und Happy begrüßt Sie sofort als seinen neuen besten Freund!</p>
-        <p data-lang="fr">Vous arrivez dans la Vallée du Sorsa avec un verre de vin et des amuse-bouches locaux. Et Happy vous accueillera comme son nouvel ami !</p>
+        <h3 data-lang="fr">🥂 Accueil spécial</h3>
+        <p data-lang="it" class="active">Arrivi e trovi vino, stuzzichini locali e tutta la famiglia — umana e a quattro zampe — pronta ad accoglierti.</p>
+        <p data-lang="en">You arrive to find wine, local snacks and the whole family — human and four-legged — ready to welcome you.</p>
+        <p data-lang="de">Sie kommen an und finden Wein, lokale Snacks und die ganze Familie — menschlich und vierbeinig — bereit, Sie zu empfangen.</p>
+        <p data-lang="fr">Vous arrivez et trouvez du vin, des amuse-bouches locaux et toute la famille — humaine et à quatre pattes — prête à vous accueillir.</p>
       </div>
       <div class="step">
-        <div class="step-number">3</div>
-        <h3 data-lang="it" class="active">🗺️ Il tuo programma su misura</h3>
-        <h3 data-lang="en">🗺️ Your Tailor-Made Program</h3>
-        <h3 data-lang="de">🗺️ Ihr maßgeschneidertes Programm</h3>
-        <h3 data-lang="fr">🗺️ Votre Programme sur Mesure</h3>
-        <p data-lang="it" class="active">Ci sediamo, chiacchieriamo e progettiamo insieme il programma perfetto per te. Le attività cambiano stagione per stagione.</p>
-        <p data-lang="en">We sit down, chat, and design the perfect program together. Activities change season by season.</p>
-        <p data-lang="de">Wir setzen uns, plaudern und gestalten gemeinsam das perfekte Programm. Aktivitäten ändern sich von Jahreszeit zu Jahreszeit.</p>
-        <p data-lang="fr">Nous nous asseyons, discutons et concevons ensemble le programme parfait. Les activités changent selon les saisons.</p>
+        <div class="step-num">4</div>
+        <h3 data-lang="it" class="active">🗺️ La tua giornata su misura</h3>
+        <h3 data-lang="en">🗺️ Your tailor-made day</h3>
+        <h3 data-lang="de">🗺️ Ihr maßgeschneiderter Tag</h3>
+        <h3 data-lang="fr">🗺️ Votre journée sur mesure</h3>
+        <p data-lang="it" class="active">Scegli tra trekking, vigneto, cucina, orto, trattore, chiese… o lasciati sorprendere. Ogni giornata è unica.</p>
+        <p data-lang="en">Choose from trekking, vineyard, cooking, garden, tractor, churches… or let yourself be surprised. Every day is unique.</p>
+        <p data-lang="de">Wählen Sie zwischen Wandern, Weinberg, Kochen, Garten, Traktor, Kirchen… oder lassen Sie sich überraschen. Jeder Tag ist einzigartig.</p>
+        <p data-lang="fr">Choisissez entre randonnée, vignoble, cuisine, jardin, tracteur, églises… ou laissez-vous surprendre. Chaque journée est unique.</p>
       </div>
       <div class="step">
-        <div class="step-number">4</div>
-        <h3 data-lang="it" class="active">🍽️ Si mangia tutti insieme!</h3>
-        <h3 data-lang="en">🍽️ We All Eat Together!</h3>
-        <h3 data-lang="de">🍽️ Wir essen alle zusammen!</h3>
-        <h3 data-lang="fr">🍽️ On mange tous ensemble !</h3>
-        <p data-lang="it" class="active">Il gran finale: a tavola tutti insieme a mangiare quello che abbiamo cucinato. Vino, risate e ricordi per sempre.</p>
-        <p data-lang="en">The grand finale: we all sit at the table and eat what we cooked. Wine, laughter and memories forever.</p>
-        <p data-lang="de">Das große Finale: Wir sitzen alle am Tisch und essen, was wir gekocht haben. Wein, Gelächter und Erinnerungen für immer.</p>
-        <p data-lang="fr">Le grand final : tous à table pour manger ce qu'on a cuisiné. Vin, rires et souvenirs pour toujours.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HAPPY -->
-<section class="happy-section" id="happy">
-  <div class="container">
-    <div class="happy-inner">
-      <img src="images/happy2.png" alt="Happy il cane mascotte di Experience Romagna Valle del Sorsa Cesena">
-      <div class="happy-text">
-        <h2 data-lang="it" class="active">🐶 Incontra Happy,<br>il nostro Direttore del Benvenuto</h2>
-        <h2 data-lang="en">🐶 Meet Happy,<br>our Director of Welcoming</h2>
-        <h2 data-lang="de">🐶 Triff Happy,<br>unseren Begrüßungsdirektor</h2>
-        <h2 data-lang="fr">🐶 Rencontrez Happy,<br>notre Directeur de l'Accueil</h2>
-        <p data-lang="it" class="active">Happy non è solo un cane — è il nostro supervisore della qualità a quattro zampe. Bianco, soffice, giocoso e pieno di amore, ti accompagnerà durante tutte le attività (se vuoi!). Ama le coccole, correre tra i campi e assicurarsi che la tua giornata sia piena di sorrisi.</p>
-        <p data-lang="en">Happy isn't just a dog — he's our four-legged quality supervisor. White, fluffy, playful and full of love, he'll accompany you during all activities (if you wish!). He loves cuddles, running in the fields, and making sure your day is filled with smiles.</p>
-        <p data-lang="de">Happy ist nicht nur ein Hund — er ist unser vierbeiniger Qualitätssupervisor. Weiß, flauschig, verspielt und voller Liebe, begleitet er Sie bei allen Aktivitäten (wenn Sie möchten!).</p>
-        <p data-lang="fr">Happy n'est pas seulement un chien — c'est notre superviseur qualité à quatre pattes. Blanc, moelleux, joueur et plein d'amour, il vous accompagnera lors de toutes les activités !</p>
-        <p data-lang="it" class="active">È il mascotte perfetto per il tuo album di ricordi in Romagna. Preparati ad innamorarti! 🐾</p>
-        <p data-lang="en">He's the perfect mascot for your Romagna memory album. Get ready to fall in love! 🐾</p>
-        <p data-lang="de">Er ist das perfekte Maskottchen für Ihr Romagna-Erinnerungsalbum. Machen Sie sich bereit, sich zu verlieben! 🐾</p>
-        <p data-lang="fr">Il est la mascotte parfaite pour votre album de souvenirs en Romagne. Préparez-vous à tomber amoureux ! 🐾</p>
+        <div class="step-num">5</div>
+        <h3 data-lang="it" class="active">🍽️ A tavola tutti insieme</h3>
+        <h3 data-lang="en">🍽️ Everyone at the table</h3>
+        <h3 data-lang="de">🍽️ Alle an den Tisch</h3>
+        <h3 data-lang="fr">🍽️ Tous à table ensemble</h3>
+        <p data-lang="it" class="active">Il gran finale: ci sediamo tutti insieme e mangiamo quello che abbiamo cucinato. Vino, risate, e ricordi per sempre.</p>
+        <p data-lang="en">The grand finale: we all sit together and eat what we cooked. Wine, laughter and memories forever.</p>
+        <p data-lang="de">Das große Finale: Wir sitzen alle zusammen und essen, was wir gekocht haben. Wein, Gelächter und Erinnerungen für immer.</p>
+        <p data-lang="fr">Le grand final : nous nous asseyons tous ensemble et mangeons ce que nous avons cuisiné. Vin, rires et souvenirs pour toujours.</p>
       </div>
     </div>
   </div>
@@ -509,20 +430,21 @@ footer p { margin-bottom: 8px; }
       <div class="divider"></div>
     </div>
     <div class="gallery-grid">
-      <img src="images/selfie-colline.png" alt="Coppia Valle del Sorsa colline Romagna" loading="lazy">
+      <!-- FOTO GALLERY: modifica i nomi dei file per cambiare le immagini -->
+      <img src="images/happy-stella2.png" alt="Happy e Stella sui calanchi Valle del Sorsa Cesena" loading="lazy">
       <img src="images/cappelletti.png" alt="Cappelletti romagnoli fatti a mano" loading="lazy">
-      <img src="images/trekking-gruppo.png" alt="Gruppo trekking Valle del Sorsa" loading="lazy">
-      <img src="images/vendemmia.png" alt="Vendemmia Sangiovese Romagna" loading="lazy">
-      <img src="images/verdure.png" alt="Verdure biologiche orto Romagna" loading="lazy">
+      <img src="images/trekking-gruppo.png" alt="Gruppo trekking Valle del Sorsa Romagna" loading="lazy">
+      <img src="images/vendemmia.png" alt="Vendemmia Sangiovese Romagna Valle del Sorsa" loading="lazy">
+      <img src="images/verdure.png" alt="Verdure biologiche orto Valle del Sorsa" loading="lazy">
       <img src="images/cartelli.png" alt="Cartello LuogoRaro Cesena Romagna" loading="lazy">
       <img src="images/sfoglia.png" alt="Sfoglia matterello pasta fresca Romagna" loading="lazy">
-      <img src="images/pasta.png" alt="Pasta fresca tagliatelle Romagna" loading="lazy">
+      <img src="images/cucina.png" alt="Cucina romagnola cooking class" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- TRANSPORT -->
-<section class="transport">
+<!-- SHUTTLE -->
+<section class="shuttle">
   <div class="container">
     <div class="section-title">
       <h2 data-lang="it" class="active">🚌 Shuttle Gratuito dalla Costa</h2>
@@ -530,17 +452,17 @@ footer p { margin-bottom: 8px; }
       <h2 data-lang="de">🚌 Kostenloser Shuttle von der Küste</h2>
       <h2 data-lang="fr">🚌 Navette Gratuite depuis la Côte</h2>
       <div class="divider"></div>
-      <p data-lang="it" class="active">Sei in vacanza al mare? Nessun problema! Organizziamo il trasporto su richiesta dalle principali località della Riviera Romagnola fino alla Valle del Sorsa.</p>
-      <p data-lang="en">On holiday at the seaside? No problem! We organize transport on request from the main Romagna Riviera resorts to the Sorsa Valley.</p>
-      <p data-lang="de">Im Urlaub am Meer? Kein Problem! Wir organisieren Transport auf Anfrage von den wichtigsten Orten der Romagna Riviera zum Sorsa-Tal.</p>
-      <p data-lang="fr">En vacances au bord de la mer ? Pas de problème ! Nous organisons le transport sur demande depuis les principales stations de la Riviera de Romagne.</p>
+      <p data-lang="it" class="active">Sei in vacanza al mare? Nessun problema. Organizziamo il trasporto su richiesta dalla Riviera Romagnola alla Valle del Sorsa. Un'ora di auto e sei in un altro mondo.</p>
+      <p data-lang="en">On holiday at the sea? No problem. We organize transport on request from the Romagna Riviera to the Sorsa Valley. One hour by car and you're in another world.</p>
+      <p data-lang="de">Im Urlaub am Meer? Kein Problem. Wir organisieren Transport auf Anfrage von der Romagna Riviera zum Sorsa-Tal. Eine Stunde Fahrt und Sie sind in einer anderen Welt.</p>
+      <p data-lang="fr">En vacances à la mer ? Pas de problème. Nous organisons le transport sur demande de la Riviera de Romagne à la Vallée du Sorsa. Une heure de voiture et vous êtes dans un autre monde.</p>
     </div>
-    <div class="transport-badges">
-      <span class="transport-badge">🏖️ Cesenatico</span>
-      <span class="transport-badge">🏖️ Cervia</span>
-      <span class="transport-badge">🏖️ Pinarella</span>
-      <span class="transport-badge">🏖️ Bellaria</span>
-      <span class="transport-badge">🏙️ Cesena</span>
+    <div class="shuttle-badges">
+      <span class="shuttle-badge">🏖️ Cesenatico</span>
+      <span class="shuttle-badge">🏖️ Cervia</span>
+      <span class="shuttle-badge">🏖️ Pinarella</span>
+      <span class="shuttle-badge">🏖️ Bellaria</span>
+      <span class="shuttle-badge">🏙️ Cesena</span>
     </div>
   </div>
 </section>
@@ -552,18 +474,21 @@ footer p { margin-bottom: 8px; }
 </div>
 
 <!-- CONTACT -->
-<section class="contact" id="contatti">
+<section style="background: white; padding: 80px 20px;" id="contatti">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h2 data-lang="it" class="active">📩 Costruiamo Insieme la tua Giornata!</h2>
-        <h2 data-lang="en">📩 Let's Build Your Day Together!</h2>
-        <h2 data-lang="de">📩 Gestalten wir Ihren Tag gemeinsam!</h2>
-        <h2 data-lang="fr">📩 Construisons votre journée ensemble !</h2>
-        <p data-lang="it" class="active">Lasciaci i tuoi contatti e ti richiameremo noi per organizzare la tua esperienza perfetta. Non vediamo l'ora di conoscerti!</p>
-        <p data-lang="en">Leave us your contact and we'll call you back to organize your perfect experience. We can't wait to meet you!</p>
-        <p data-lang="de">Hinterlassen Sie Ihre Kontaktdaten und wir rufen Sie zurück. Wir freuen uns darauf, Sie kennenzulernen!</p>
-        <p data-lang="fr">Laissez-nous vos coordonnées et nous vous rappellerons. Nous avons hâte de vous rencontrer !</p>
+    <div class="section-title">
+      <h2 data-lang="it" class="active">📩 Scrivici — È Gratis!</h2>
+      <h2 data-lang="en">📩 Write to Us — It's Free!</h2>
+      <h2 data-lang="de">📩 Schreib uns — Es ist kostenlos!</h2>
+      <h2 data-lang="fr">📩 Écrivez-nous — C'est Gratuit !</h2>
+      <div class="divider"></div>
+      <p data-lang="it" class="active">Non aspettare. Scrivici su WhatsApp e costruiamo insieme la tua giornata perfetta nella Valle del Sorsa.</p>
+      <p data-lang="en">Don't wait. Write to us on WhatsApp and let's build your perfect day in the Sorsa Valley together.</p>
+      <p data-lang="de">Warte nicht. Schreib uns auf WhatsApp und lass uns zusammen deinen perfekten Tag im Sorsa-Tal gestalten.</p>
+      <p data-lang="fr">N'attendez pas. Écrivez-nous sur WhatsApp et construisons ensemble votre journée parfaite dans la Vallée du Sorsa.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;" class="contact-grid-responsive">
+      <div>
         <div class="contact-item">
           <span class="icon">📱</span>
           <div>
@@ -586,25 +511,45 @@ footer p { margin-bottom: 8px; }
           </div>
         </div>
         <div class="contact-item">
+          <span class="icon">📘</span>
+          <div>
+            <strong>Facebook</strong><br>
+            <a href="https://www.facebook.com/share/1J6EupGuLo/" target="_blank" rel="noopener">Peace and Good People ODV</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <span class="icon">📸</span>
+          <div>
+            <strong>Instagram</strong><br>
+            <a href="https://www.instagram.com/pgp.odv" target="_blank" rel="noopener">@pgp.odv</a>
+          </div>
+        </div>
+        <div class="contact-item">
           <span class="icon">📍</span>
           <div>
             <strong>Valle del Sorsa</strong><br>
             <span style="color:var(--text-light)">Cesena, Emilia-Romagna, Italia</span>
           </div>
         </div>
-        <div class="contact-item">
-          <span class="icon">🌍</span>
+        <div class="contact-item" style="background: linear-gradient(135deg, #e8f4e6, #d4edda);">
+          <span class="icon">✨</span>
           <div>
-            <strong>Peace and Good People ODV</strong><br>
-            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="it" class="active">Il ricavato va in beneficienza — Missioni in Africa e progetti sociali</span>
-            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="en">Proceeds go to charity — Missions in Africa and social projects</span>
-            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="de">Erlöse für wohltätige Zwecke — Missionen in Afrika und soziale Projekte</span>
-            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="fr">Bénéfices pour des œuvres caritatives — Missions en Afrique et projets sociaux</span>
+            <strong data-lang="it" class="active">100% Gratuito — Di Provvidenza</strong>
+            <strong data-lang="en">100% Free — By Providence</strong>
+            <strong data-lang="de">100% Kostenlos — Aus Vorsehung</strong>
+            <strong data-lang="fr">100% Gratuit — Par Providence</strong>
+            <br>
+            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="it" class="active">Non devi pagare nulla. Chi vuole può donare liberamente per sostenere la nostra missione in Sud Sudan.</span>
+            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="en">You don't have to pay anything. Those who wish can freely donate to support our mission in South Sudan.</span>
+            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="de">Sie müssen nichts bezahlen. Wer möchte, kann frei für unsere Mission im Südsudan spenden.</span>
+            <span style="color:var(--text-light); font-size:0.9rem;" data-lang="fr">Vous n'avez rien à payer. Ceux qui le souhaitent peuvent librement faire un don pour notre mission au Soudan du Sud.</span>
           </div>
         </div>
       </div>
-      <div class="form-wrapper">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4CN4AVN9iKxZJMytGkEgsSaHIRoL7BvJD6KryHV63Wq---A/viewform?embedded=true" title="Prenota Experience Romagna" loading="lazy">
+      <div>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4CN4AVN9iKxZJMytGkEgsSaHIRoL7BvJD6KryHV63Wq---A/viewform?embedded=true"
+          width="100%" style="min-height:680px; border:none; border-radius:12px; box-shadow:var(--shadow);"
+          title="Prenota Experience Romagna" loading="lazy">
         </iframe>
       </div>
     </div>
@@ -613,56 +558,47 @@ footer p { margin-bottom: 8px; }
 
 <!-- FOOTER -->
 <footer>
+  <div class="footer-nav">
+    <a href="index.html" class="nav-home">Home</a>
+    <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+    <a href="missione.html" class="nav-missione">Missione</a>
+    <a href="https://www.facebook.com/share/1J6EupGuLo/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://www.instagram.com/pgp.odv" target="_blank" rel="noopener">Instagram</a>
+  </div>
   <p><strong>Experience Romagna</strong> — Valle del Sorsa, Cesena, Emilia-Romagna, Italia</p>
-  <p>Un progetto di <a href="mailto:pgp.odv@gmail.com"><strong>Peace and Good People ODV</strong></a> &nbsp;|&nbsp;
-  <span class="il active" data-li="it">Tutti i diritti riservati</span>
-  <span class="il" data-li="en">All rights reserved</span>
-  <span class="il" data-li="de">Alle Rechte vorbehalten</span>
-  <span class="il" data-li="fr">Tous droits réservés</span>
-  © 2025</p>
-  <p style="font-size:12px; margin-top:8px; opacity:0.6;">
-    <span data-lang="it" class="active">Il ricavato delle esperienze è destinato a missioni umanitarie in Africa e a progetti sociali in Italia.</span>
-    <span data-lang="en">Proceeds from experiences go to humanitarian missions in Africa and social projects in Italy.</span>
-    <span data-lang="de">Die Einnahmen fließen in humanitäre Missionen in Afrika und soziale Projekte in Italien.</span>
-    <span data-lang="fr">Les recettes sont destinées à des missions humanitaires en Afrique et à des projets sociaux en Italie.</span>
+  <p>
+    <span class="il active" data-li="it">Un progetto gratuito di</span>
+    <span class="il" data-li="en">A free project by</span>
+    <span class="il" data-li="de">Ein kostenloses Projekt von</span>
+    <span class="il" data-li="fr">Un projet gratuit de</span>
+    <a href="missione.html"><strong>Peace and Good People ODV</strong></a>
+    &nbsp;©&nbsp;2025
+  </p>
+  <p style="font-size:12px; margin-top:8px; opacity:0.55;">
+    <span data-lang="it" class="active">Tutte le esperienze sono gratuite e di provvidenza. Le donazioni sostengono la missione francescana a Juba, Sud Sudan.</span>
+    <span data-lang="en">All experiences are free and by providence. Donations support the Franciscan mission in Juba, South Sudan.</span>
+    <span data-lang="de">Alle Erlebnisse sind kostenlos und aus Vorsehung. Spenden unterstützen die franziskanische Mission in Juba, Südsudan.</span>
+    <span data-lang="fr">Toutes les expériences sont gratuites et par providence. Les dons soutiennent la mission franciscaine à Juba, Soudan du Sud.</span>
   </p>
 </footer>
 
+<!-- WHATSAPP FLOATING BUTTON -->
+<div class="wa-float">
+  <a href="https://wa.me/393518821873" target="_blank" rel="noopener" class="wa-btn">
+    <span class="wa-icon">💬</span>
+    <span class="wa-text">Scrivici su WhatsApp</span>
+  </a>
+</div>
+
+<script src="lang.js"></script>
 <script>
-const navText = {
-  it: ['Esperienze','Come funziona','Happy 🐶','Contatti'],
-  en: ['Experiences','How it works','Happy 🐶','Contacts'],
-  de: ['Erlebnisse','Wie es funktioniert','Happy 🐶','Kontakt'],
-  fr: ['Expériences','Comment ça marche','Happy 🐶','Contacts']
-};
-const cta1Text = { it:'Prenota la tua Esperienza', en:'Book Your Experience', de:'Erlebnis Buchen', fr:'Réserver votre Expérience' };
-const cta2Text = { it:'Scopri le Esperienze', en:'Discover Experiences', de:'Erlebnisse Entdecken', fr:'Découvrir les Expériences' };
-const titles = {
-  it:'Experience Romagna – Esperienze Autentiche nella Valle del Sorsa, Cesena',
-  en:'Experience Romagna – Authentic Rural Experiences in the Sorsa Valley, Italy',
-  de:'Experience Romagna – Authentische Erlebnisse im Sorsa-Tal, Cesena, Italien',
-  fr:'Experience Romagna – Expériences Authentiques dans la Vallée du Sorsa, Italie'
-};
-
-function setLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('[data-lang="'+lang+'"]').forEach(el => el.classList.add('active'));
-  document.querySelectorAll('.il').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('[data-li="'+lang+'"]').forEach(el => el.classList.add('active'));
-  document.querySelectorAll('.lang-bar button').forEach(b => b.classList.remove('active'));
-  document.getElementById('btn-'+lang).classList.add('active');
-  const links = document.querySelectorAll('.nav-links a');
-  links.forEach((l,i) => { if(navText[lang][i]) l.textContent = navText[lang][i]; });
-  document.getElementById('cta1').textContent = cta1Text[lang];
-  document.getElementById('cta2').textContent = cta2Text[lang];
-  document.title = titles[lang];
-  document.documentElement.lang = lang;
-}
-
-window.addEventListener('DOMContentLoaded', function() {
-  const bl = navigator.language.substring(0,2).toLowerCase();
-  setLang(['it','en','de','fr'].includes(bl) ? bl : 'en');
-});
+  initLang('index');
 </script>
+<style>
+@media (max-width: 768px) {
+  .contact-grid-responsive { grid-template-columns: 1fr !important; }
+}
+</style>
 </body>
 </html>

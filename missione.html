@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Nostra Missione – Peace and Good People ODV | Experience Romagna</title>
+<meta name="description" content="Experience Romagna è un progetto gratuito di provvidenza di Peace and Good People ODV. Il ricavato sostiene la missione francescana a Juba, Sud Sudan, guidata da Frate Federico Gandolfi di Cesena.">
+<meta name="keywords" content="Peace and Good People ODV, missione francescana Juba Sud Sudan, Frate Federico Gandolfi Cesena, volontariato Romagna, ONLUS Cesena, donazione missione Africa, turismo solidale Romagna, provvidenza Romagna">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.experienceromagna.com/missione.html">
+<meta property="og:title" content="La Nostra Missione – Peace and Good People ODV | Experience Romagna">
+<meta property="og:description" content="Esperienze gratuite di provvidenza. Il ricavato va alla missione francescana a Juba, Sud Sudan.">
+<meta property="og:url" content="https://www.experienceromagna.com/missione.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero {
+  background: linear-gradient(160deg, #1a2a1a, var(--green-dark));
+  padding: 80px 20px 60px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  /* FOTO: usa colline.png o hero-colline.png -->
+  background-image: url('images/hero-colline.png');
+  background-size: cover; background-position: center; opacity: 0.15;
+}
+.page-hero-content { position: relative; z-index: 1; max-width: 740px; margin: 0 auto; }
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 14px; }
+.page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 580px; margin: 0 auto; }
+
+/* PROVVIDENZA SECTION */
+.provv-section { background: white; }
+.provv-inner { max-width: 800px; margin: 0 auto; }
+.provv-inner h2 { font-size: 2rem; color: var(--green-dark); margin-bottom: 20px; }
+.provv-inner p { color: var(--text-light); margin-bottom: 18px; font-size: 1.05rem; line-height: 1.85; }
+.provv-inner blockquote {
+  border-left: 4px solid var(--gold);
+  padding: 16px 24px;
+  margin: 24px 0;
+  background: var(--cream);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: var(--green-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+}
+
+/* MISSION CARD */
+.mission-card {
+  background: linear-gradient(135deg, var(--green-dark), #1a3a18);
+  color: white;
+  border-radius: 20px;
+  padding: 48px;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+.mission-card::before {
+  content: '✝';
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  font-size: 8rem;
+  opacity: 0.06;
+  font-family: serif;
+}
+.mission-card h2 { font-size: 1.8rem; color: var(--gold); margin-bottom: 16px; }
+.mission-card p { opacity: 0.92; margin-bottom: 14px; font-size: 1.02rem; line-height: 1.8; }
+.mission-card strong { color: var(--gold-light); }
+.mission-links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+.mission-links a {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: background 0.2s;
+}
+.mission-links a:hover { background: rgba(255,255,255,0.25); }
+
+/* VALUES */
+.values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 20px; }
+.value-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--gold);
+}
+.value-card .value-icon { font-size: 2.5rem; margin-bottom: 14px; }
+.value-card h3 { color: var(--green-dark); font-size: 1.1rem; margin-bottom: 10px; }
+.value-card p { color: var(--text-light); font-size: 0.92rem; }
+
+@media (max-width: 768px) {
+  .mission-card { padding: 28px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <button onclick="setLang('it','missione')" id="btn-it">🇮🇹 Italiano</button>
+  <button onclick="setLang('en','missione')" id="btn-en">🇬🇧 English</button>
+  <button onclick="setLang('de','missione')" id="btn-de">🇩🇪 Deutsch</button>
+  <button onclick="setLang('fr','missione')" id="btn-fr">🇫🇷 Français</button>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Experience <span>Romagna</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-home">Home</a>
+    <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+    <a href="missione.html" class="nav-missione active-page">La Nostra Missione</a>
+    <a href="index.html#contatti" class="nav-contatti">Contatti</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-home">Home</a>
+  <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+  <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+  <a href="missione.html" class="nav-missione">La Nostra Missione</a>
+  <a href="index.html#contatti" class="nav-contatti">Contatti</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <h1 data-lang="it" class="active">Provvidenza,<br>Gratuità e Missione</h1>
+    <h1 data-lang="en">Providence,<br>Gratuity and Mission</h1>
+    <h1 data-lang="de">Vorsehung,<br>Unentgeltlichkeit und Mission</h1>
+    <h1 data-lang="fr">Providence,<br>Gratuité et Mission</h1>
+    <p data-lang="it" class="active">Perché tutto è gratuito. La storia di Peace and Good People ODV e della missione francescana a Juba, Sud Sudan.</p>
+    <p data-lang="en">Why everything is free. The story of Peace and Good People ODV and the Franciscan mission in Juba, South Sudan.</p>
+    <p data-lang="de">Warum alles kostenlos ist. Die Geschichte von Peace and Good People ODV und der franziskanischen Mission in Juba, Südsudan.</p>
+    <p data-lang="fr">Pourquoi tout est gratuit. L'histoire de Peace and Good People ODV et de la mission franciscaine à Juba, Soudan du Sud.</p>
+  </div>
+</section>
+
+<!-- PROVVIDENZA -->
+<section class="provv-section">
+  <div class="container">
+    <div class="provv-inner">
+
+      <div data-lang="it" class="active">
+        <h2>Cos'è la Provvidenza?</h2>
+        <p>Lavorare "di provvidenza" significa fare il bene senza chiedere nulla in cambio, fidandosi che ciò che è necessario arriverà. Non è ingenuità — è una scelta di vita, un modo di relazionarsi con il mondo che mette la gratuità al centro di tutto.</p>
+        <blockquote>"La vera ricchezza non si accumula. Si condivide."</blockquote>
+        <p>Experience Romagna nasce da questa filosofia. Non esiste un listino prezzi perché il valore di una giornata passata insieme — tra i vigneti, i calanchi e i profumi della cucina romagnola — non si può e non si vuole monetizzare. Chi partecipa porta via con sé qualcosa di vero: un ricordo, un legame, un'esperienza che le cose acquistate non possono dare.</p>
+        <p>Chi vuole può scegliere liberamente di fare una donazione per sostenere la missione di Peace and Good People ODV in Sud Sudan. Ma nessuno è obbligato, e nessuno sarà mai giudicato per non averlo fatto.</p>
+      </div>
+
+      <div data-lang="en">
+        <h2>What is Providence?</h2>
+        <p>Working "by providence" means doing good without asking anything in return, trusting that what is needed will come. It's not naivety — it's a life choice, a way of relating to the world that puts gratuity at the center of everything.</p>
+        <blockquote>"True wealth is not accumulated. It is shared."</blockquote>
+        <p>Experience Romagna was born from this philosophy. There is no price list because the value of a day spent together — among the vineyards, the badlands and the scents of Romagna cooking — cannot and should not be monetized. Those who participate take away something real: a memory, a bond, an experience that purchased things cannot give.</p>
+        <p>Those who wish can freely choose to donate to support Peace and Good People ODV's mission in South Sudan. But no one is obliged, and no one will ever be judged for not having done so.</p>
+      </div>
+
+      <div data-lang="de">
+        <h2>Was ist Vorsehung?</h2>
+        <p>Aus "Vorsehung" zu arbeiten bedeutet, Gutes zu tun, ohne etwas dafür zu verlangen, und darauf zu vertrauen, dass das Notwendige kommen wird. Es ist keine Naivität — es ist eine Lebensentscheidung, eine Art, sich mit der Welt zu beziehen, die die Unentgeltlichkeit in den Mittelpunkt stellt.</p>
+        <blockquote>"Wahrer Reichtum wird nicht angesammelt. Er wird geteilt."</blockquote>
+        <p>Experience Romagna wurde aus dieser Philosophie geboren. Es gibt keine Preisliste, weil der Wert eines gemeinsam verbrachten Tages — zwischen den Weinbergen, den Calanchi und den Düften der Romagna-Küche — nicht monetarisiert werden kann und soll.</p>
+      </div>
+
+      <div data-lang="fr">
+        <h2>Qu'est-ce que la Providence ?</h2>
+        <p>Travailler "par providence" signifie faire le bien sans rien demander en retour, en faisant confiance que ce qui est nécessaire viendra. Ce n'est pas de la naïveté — c'est un choix de vie, une façon de se rapporter au monde qui met la gratuité au centre de tout.</p>
+        <blockquote>"La vraie richesse ne s'accumule pas. Elle se partage."</blockquote>
+        <p>Experience Romagna est née de cette philosophie. Il n'existe pas de liste de prix parce que la valeur d'une journée passée ensemble — entre les vignobles, les calanchi et les parfums de la cuisine romagnole — ne peut et ne doit pas être monétisée.</p>
+      </div>
+
+      <!-- MISSION CARD -->
+      <div class="mission-card">
+        <h2>🌍 Peace and Good People ODV<br>& la Missione di Juba</h2>
+        <div data-lang="it" class="active">
+          <p><strong>Peace and Good People ODV</strong> è un'associazione di volontariato italiana che opera con spirito francescano e di provvidenza. Tra le missioni che sosteniamo con particolare attenzione c'è quella francescana a <strong>Juba, Sud Sudan</strong> — uno dei Paesi più poveri e martoriati del mondo.</p>
+          <p>La missione è guidata da <strong>Frate Federico Gandolfi</strong>, originario di <strong>Ponte Pietra (Cesena)</strong> — un figlio di questa terra romagnola che ha scelto di portare la sua vita e il suo cuore dall'altra parte del mondo, tra i più bisognosi.</p>
+          <p>Ogni esperienza che viviamo insieme nella Valle del Sorsa è, in un certo senso, collegata a quella missione lontana: il bene che facciamo qui risuona là.</p>
+        </div>
+        <div data-lang="en">
+          <p><strong>Peace and Good People ODV</strong> is an Italian volunteer association that operates with a Franciscan and providential spirit. Among the missions we support with particular attention is the Franciscan one in <strong>Juba, South Sudan</strong> — one of the poorest and most troubled countries in the world.</p>
+          <p>The mission is led by <strong>Brother Federico Gandolfi</strong>, originally from <strong>Ponte Pietra (Cesena)</strong> — a son of this Romagna land who chose to bring his life and heart to the other side of the world, among the most needy.</p>
+          <p>Every experience we live together in the Sorsa Valley is, in a sense, connected to that distant mission: the good we do here resonates there.</p>
+        </div>
+        <div data-lang="de">
+          <p><strong>Peace and Good People ODV</strong> ist ein italienischer Freiwilligenverein, der im franziskanischen Geist und aus Vorsehung arbeitet. Zu den Missionen, die wir besonders unterstützen, gehört die franziskanische in <strong>Juba, Südsudan</strong> — einem der ärmsten und gebeuteltsten Länder der Welt.</p>
+          <p>Die Mission wird geleitet von <strong>Bruder Federico Gandolfi</strong>, ursprünglich aus <strong>Ponte Pietra (Cesena)</strong> — ein Sohn dieses Romagna-Landes, der sein Leben und Herz auf die andere Seite der Welt getragen hat.</p>
+        </div>
+        <div data-lang="fr">
+          <p><strong>Peace and Good People ODV</strong> est une association bénévole italienne qui opère dans un esprit franciscain et de providence. Parmi les missions que nous soutenons avec une attention particulière figure celle franciscaine à <strong>Juba, Soudan du Sud</strong> — l'un des pays les plus pauvres et les plus éprouvés du monde.</p>
+          <p>La mission est dirigée par <strong>Frère Federico Gandolfi</strong>, originaire de <strong>Ponte Pietra (Cesena)</strong> — un fils de cette terre de Romagne qui a choisi d'apporter sa vie et son cœur de l'autre côté du monde.</p>
+        </div>
+        <div class="mission-links">
+          <a href="https://www.facebook.com/share/1J6EupGuLo/" target="_blank" rel="noopener">📘 Facebook PGP</a>
+          <a href="https://www.instagram.com/pgp.odv" target="_blank" rel="noopener">📸 Instagram @pgp.odv</a>
+        </div>
+      </div>
+
+      <!-- VALUES -->
+      <div data-lang="it" class="active">
+        <h2 style="color:var(--green-dark); text-align:center; margin-bottom:32px;">I nostri valori</h2>
+      </div>
+      <div data-lang="en">
+        <h2 style="color:var(--green-dark); text-align:center; margin-bottom:32px;">Our values</h2>
+      </div>
+      <div data-lang="de">
+        <h2 style="color:var(--green-dark); text-align:center; margin-bottom:32px;">Unsere Werte</h2>
+      </div>
+      <div data-lang="fr">
+        <h2 style="color:var(--green-dark); text-align:center; margin-bottom:32px;">Nos valeurs</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">🕊️</div>
+          <h3 data-lang="it" class="active">Gratuità</h3>
+          <h3 data-lang="en">Gratuity</h3>
+          <h3 data-lang="de">Unentgeltlichkeit</h3>
+          <h3 data-lang="fr">Gratuité</h3>
+          <p data-lang="it" class="active">Nessun prezzo, nessun biglietto. Il valore delle esperienze non si misura in euro.</p>
+          <p data-lang="en">No price, no ticket. The value of experiences is not measured in euros.</p>
+          <p data-lang="de">Kein Preis, kein Ticket. Der Wert von Erlebnissen wird nicht in Euro gemessen.</p>
+          <p data-lang="fr">Pas de prix, pas de billet. La valeur des expériences ne se mesure pas en euros.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌱</div>
+          <h3 data-lang="it" class="active">Autenticità</h3>
+          <h3 data-lang="en">Authenticity</h3>
+          <h3 data-lang="de">Authentizität</h3>
+          <h3 data-lang="fr">Authenticité</h3>
+          <p data-lang="it" class="active">Non siamo un agriturismo turistico. Siamo una famiglia che apre le porte di casa propria.</p>
+          <p data-lang="en">We are not a tourist farmhouse. We are a family that opens the doors of their own home.</p>
+          <p data-lang="de">Wir sind kein touristischer Bauernhof. Wir sind eine Familie, die die Türen ihres eigenen Hauses öffnet.</p>
+          <p data-lang="fr">Nous ne sommes pas une ferme touristique. Nous sommes une famille qui ouvre les portes de sa propre maison.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">🌍</div>
+          <h3 data-lang="it" class="active">Solidarietà</h3>
+          <h3 data-lang="en">Solidarity</h3>
+          <h3 data-lang="de">Solidarität</h3>
+          <h3 data-lang="fr">Solidarité</h3>
+          <p data-lang="it" class="active">Ogni giornata in Romagna è un filo sottile che ci lega a chi soffre dall'altra parte del mondo.</p>
+          <p data-lang="en">Every day in Romagna is a thin thread that connects us to those suffering on the other side of the world.</p>
+          <p data-lang="de">Jeder Tag in der Romagna ist ein dünner Faden, der uns mit denen verbindet, die auf der anderen Seite der Welt leiden.</p>
+          <p data-lang="fr">Chaque journée en Romagne est un fil ténu qui nous relie à ceux qui souffrent de l'autre côté du monde.</p>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">❤️</div>
+          <h3 data-lang="it" class="active">Comunità</h3>
+          <h3 data-lang="en">Community</h3>
+          <h3 data-lang="de">Gemeinschaft</h3>
+          <h3 data-lang="fr">Communauté</h3>
+          <p data-lang="it" class="active">Chi viene in visita non è un cliente. È un ospite, un amico, parte di questa piccola comunità.</p>
+          <p data-lang="en">Those who visit are not customers. They are guests, friends, part of this small community.</p>
+          <p data-lang="de">Wer zu Besuch kommt, ist kein Kunde. Er ist ein Gast, ein Freund, Teil dieser kleinen Gemeinschaft.</p>
+          <p data-lang="fr">Ceux qui viennent visiter ne sont pas des clients. Ils sont des hôtes, des amis, faisant partie de cette petite communauté.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--green-dark); text-align:center; padding:60px 20px; color:white;">
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="it" class="active">Vieni a trovarci. È gratis.</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="en">Come visit us. It's free.</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="de">Besuchen Sie uns. Es ist kostenlos.</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="fr">Venez nous rendre visite. C'est gratuit.</h2>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="it" class="active">Scrivi su WhatsApp e organizziamo insieme la tua giornata nella Valle del Sorsa.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="en">Write on WhatsApp and let's organize your day in the Sorsa Valley together.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="de">Schreib auf WhatsApp und lass uns gemeinsam deinen Tag im Sorsa-Tal organisieren.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="fr">Écrivez sur WhatsApp et organisons ensemble votre journée dans la Vallée du Sorsa.</p>
+  <a href="https://wa.me/393518821873" target="_blank" class="btn">💬 WhatsApp</a>
+  <a href="percorsi.html" class="btn btn-outline">
+    <span class="il active" data-li="it">Vedi i Percorsi →</span>
+    <span class="il" data-li="en">See the Trails →</span>
+    <span class="il" data-li="de">Wege ansehen →</span>
+    <span class="il" data-li="fr">Voir les Parcours →</span>
+  </a>
+</section>
+
+<footer>
+  <div class="footer-nav">
+    <a href="index.html" class="nav-home">Home</a>
+    <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+    <a href="missione.html" class="nav-missione">Missione</a>
+    <a href="https://www.facebook.com/share/1J6EupGuLo/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/pgp.odv" target="_blank">Instagram</a>
+  </div>
+  <p><strong>Experience Romagna</strong> — Valle del Sorsa, Cesena, Emilia-Romagna, Italia</p>
+  <p>Un progetto gratuito di <a href="missione.html"><strong>Peace and Good People ODV</strong></a> © 2025</p>
+</footer>
+
+<div class="wa-float">
+  <a href="https://wa.me/393518821873" target="_blank" rel="noopener" class="wa-btn">
+    <span class="wa-icon">💬</span>
+    <span class="wa-text">Scrivici su WhatsApp</span>
+  </a>
+</div>
+
+<script src="lang.js"></script>
+<script>initLang('missione');</script>
+</body>
+</html>

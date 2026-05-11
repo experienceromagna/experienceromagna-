@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Occasioni Speciali in Romagna – Famiglia, Coppia, Amici | Experience Romagna</title>
+<meta name="description" content="Giornate su misura nella Valle del Sorsa per ogni occasione: famiglia con bambini, coppia romantica, addio al celibato/nubilato, compleanno, team building aziendale. Tutto gratuito, di provvidenza.">
+<meta name="keywords" content="addio celibato Romagna, compleanno in campagna Cesena, team building Romagna, cosa fare famiglie Cesena, gita romantica Romagna, escursione bambini Cesena, festa compleanno alternativa Romagna, esperienze coppia Romagna, group activities Cesena Italy">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.experienceromagna.com/occasioni.html">
+<meta property="og:title" content="Occasioni Speciali – Experience Romagna">
+<meta property="og:description" content="Giornate su misura per famiglie, coppie, amici e aziende nella Valle del Sorsa. Gratuito.">
+<meta property="og:url" content="https://www.experienceromagna.com/occasioni.html">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero {
+  background: linear-gradient(160deg, #5a3a1a, var(--earth));
+  padding: 80px 20px 60px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  /* FOTO: cambia 'selfie-colline.png' con la foto per l'hero occasioni */
+  background-image: url('images/selfie-colline.png');
+  background-size: cover; background-position: center; opacity: 0.22;
+}
+.page-hero-content { position: relative; z-index: 1; max-width: 740px; margin: 0 auto; }
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 14px; }
+.page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 580px; margin: 0 auto; }
+
+/* OCCASION CARDS */
+.occ-section { padding: 80px 20px; }
+.occ-section:nth-child(even) { background: white; }
+.occ-section:nth-child(odd) { background: var(--cream); }
+
+.occ-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 60px; align-items: start;
+}
+.occ-inner.reverse { direction: rtl; }
+.occ-inner.reverse > * { direction: ltr; }
+
+.occ-img { border-radius: 20px; overflow: hidden; box-shadow: var(--shadow-lg); }
+.occ-img img { width: 100%; height: 360px; object-fit: cover; display: block; }
+
+.occ-text .occ-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 5rem; color: var(--gold); opacity: 0.2;
+  line-height: 1; margin-bottom: -20px;
+}
+.occ-text h2 { font-size: 1.9rem; color: var(--green-dark); margin-bottom: 14px; }
+.occ-text .occ-sub { font-size: 0.9rem; color: var(--gold); font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 16px; }
+.occ-text p { color: var(--text-light); margin-bottom: 14px; font-size: 1rem; }
+.occ-text ul { color: var(--text-light); padding-left: 20px; margin-bottom: 16px; }
+.occ-text ul li { margin-bottom: 6px; font-size: 0.95rem; }
+
+/* PROGRAM EXAMPLE */
+.program-box {
+  background: linear-gradient(135deg, #e8f4e6, #f0f7ee);
+  border-left: 4px solid var(--green);
+  border-radius: 0 12px 12px 0;
+  padding: 20px 22px;
+  margin-top: 16px;
+}
+.program-box h4 { color: var(--green-dark); font-size: 1rem; margin-bottom: 12px; }
+.program-item { display: flex; gap: 12px; margin-bottom: 8px; font-size: 0.9rem; color: var(--text-light); }
+.program-time { color: var(--green); font-weight: 700; min-width: 50px; }
+
+@media (max-width: 768px) {
+  .occ-inner { grid-template-columns: 1fr; direction: ltr !important; }
+  .occ-inner.reverse { direction: ltr; }
+  .occ-img img { height: 250px; }
+}
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <button onclick="setLang('it','occasioni')" id="btn-it">🇮🇹 Italiano</button>
+  <button onclick="setLang('en','occasioni')" id="btn-en">🇬🇧 English</button>
+  <button onclick="setLang('de','occasioni')" id="btn-de">🇩🇪 Deutsch</button>
+  <button onclick="setLang('fr','occasioni')" id="btn-fr">🇫🇷 Français</button>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Experience <span>Romagna</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-home">Home</a>
+    <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni active-page">Occasioni</a>
+    <a href="missione.html" class="nav-missione">La Nostra Missione</a>
+    <a href="index.html#contatti" class="nav-contatti">Contatti</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-home">Home</a>
+  <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+  <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+  <a href="missione.html" class="nav-missione">La Nostra Missione</a>
+  <a href="index.html#contatti" class="nav-contatti">Contatti</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="free-badge">✨ <span class="il active" data-li="it">100% Gratuito</span><span class="il" data-li="en">100% Free</span><span class="il" data-li="de">100% Kostenlos</span><span class="il" data-li="fr">100% Gratuit</span></div>
+    <h1 data-lang="it" class="active">Ogni Occasione<br>Merita un Giorno Speciale</h1>
+    <h1 data-lang="en">Every Occasion<br>Deserves a Special Day</h1>
+    <h1 data-lang="de">Jeder Anlass<br>Verdient einen Besonderen Tag</h1>
+    <h1 data-lang="fr">Chaque Occasion<br>Mérite une Journée Spéciale</h1>
+    <p data-lang="it" class="active">Costruiamo insieme il programma perfetto per te, il tuo gruppo, la tua famiglia. Nessun evento è uguale all'altro.</p>
+    <p data-lang="en">Let's build the perfect program together for you, your group, your family. No event is the same as another.</p>
+    <p data-lang="de">Lassen Sie uns gemeinsam das perfekte Programm für Sie, Ihre Gruppe, Ihre Familie gestalten. Kein Event ist wie das andere.</p>
+    <p data-lang="fr">Construisons ensemble le programme parfait pour vous, votre groupe, votre famille. Aucun événement n'est semblable à un autre.</p>
+  </div>
+</section>
+
+<!-- 1. FAMIGLIA -->
+<section class="occ-section">
+  <div class="occ-inner">
+    <div class="occ-img">
+      <!-- FOTO: usa happy-stella.png o trekking-gruppo.png -->
+      <img src="images/happy-stella.png" alt="Gita in famiglia Valle del Sorsa Cesena Romagna bambini" loading="lazy">
+    </div>
+    <div class="occ-text">
+      <div class="occ-number">01</div>
+      <div class="occ-sub">
+        <span class="il active" data-li="it">👨‍👩‍👧‍👦 Per le Famiglie</span>
+        <span class="il" data-li="en">👨‍👩‍👧‍👦 For Families</span>
+        <span class="il" data-li="de">👨‍👩‍👧‍👦 Für Familien</span>
+        <span class="il" data-li="fr">👨‍👩‍👧‍👦 Pour les Familles</span>
+      </div>
+      <h2 data-lang="it" class="active">Una Giornata in Famiglia<br>da Raccontare per Sempre</h2>
+      <h2 data-lang="en">A Family Day<br>to Tell Forever</h2>
+      <h2 data-lang="de">Ein Familientag<br>den man für immer erzählt</h2>
+      <h2 data-lang="fr">Une Journée en Famille<br>à Raconter pour Toujours</h2>
+      <p data-lang="it" class="active">Stai cercando qualcosa di diverso dalla solita domenica? Un posto dove i bambini possano correre liberi, toccare la terra, raccogliere un uovo ancora caldo, fare la piadina con le loro mani? La Valle del Sorsa è il posto giusto.</p>
+      <p data-lang="en">Are you looking for something different from the usual Sunday? A place where children can run free, touch the earth, collect a still-warm egg, make piadina with their own hands? The Sorsa Valley is the right place.</p>
+      <p data-lang="de">Suchen Sie etwas anderes als den üblichen Sonntag? Einen Ort, an dem Kinder frei laufen, die Erde berühren, ein noch warmes Ei sammeln, Piadina mit ihren eigenen Händen machen können? Das Sorsa-Tal ist der richtige Ort.</p>
+      <p data-lang="fr">Vous cherchez quelque chose de différent du dimanche habituel ? Un endroit où les enfants peuvent courir librement, toucher la terre, collecter un œuf encore chaud, faire de la piadina de leurs propres mains ? La Vallée du Sorsa est le bon endroit.</p>
+      <div class="program-box">
+        <h4 data-lang="it" class="active">🗓 Esempio di programma famiglia:</h4>
+        <h4 data-lang="en">🗓 Example family program:</h4>
+        <h4 data-lang="de">🗓 Beispiel Familienprogramm:</h4>
+        <h4 data-lang="fr">🗓 Exemple de programme famille :</h4>
+        <div class="program-item"><span class="program-time">10:00</span><span data-lang="it" class="active">Arrivo, benvenuto con vino/succhi, incontro con Happy e Stella</span><span data-lang="en">Arrival, welcome with wine/juices, meeting Happy and Stella</span><span data-lang="de">Ankunft, Begrüßung mit Wein/Säften, Treffen mit Happy und Stella</span><span data-lang="fr">Arrivée, accueil avec vin/jus, rencontre avec Happy et Stella</span></div>
+        <div class="program-item"><span class="program-time">10:30</span><span data-lang="it" class="active">Raccolta delle uova nel pollaio con i bambini</span><span data-lang="en">Egg collection in the henhouse with the children</span><span data-lang="de">Eiersammeln im Hühnerstall mit den Kindern</span><span data-lang="fr">Collecte des œufs au poulailler avec les enfants</span></div>
+        <div class="program-item"><span class="program-time">11:00</span><span data-lang="it" class="active">Visita all'orto biologico e raccolta delle verdure</span><span data-lang="en">Visit to the organic garden and vegetable harvesting</span><span data-lang="de">Besuch des Bio-Gartens und Gemüseernte</span><span data-lang="fr">Visite du jardin bio et récolte des légumes</span></div>
+        <div class="program-item"><span class="program-time">12:00</span><span data-lang="it" class="active">Cucina romagnola: piadina e tagliatelle con i bambini</span><span data-lang="en">Romagna cooking: piadina and tagliatelle with the children</span><span data-lang="de">Romagna-Kochen: Piadina und Tagliatelle mit den Kindern</span><span data-lang="fr">Cuisine romagnole: piadina et tagliatelles avec les enfants</span></div>
+        <div class="program-item"><span class="program-time">13:30</span><span data-lang="it" class="active">Pranzo tutti insieme con quello che abbiamo cucinato</span><span data-lang="en">Lunch all together with what we cooked</span><span data-lang="de">Mittagessen alle zusammen mit dem, was wir gekocht haben</span><span data-lang="fr">Déjeuner tous ensemble avec ce qu'on a cuisiné</span></div>
+        <div class="program-item"><span class="program-time">15:00</span><span data-lang="it" class="active">Passeggiata con Happy e Stella (30 min) o riposo</span><span data-lang="en">Walk with Happy and Stella (30 min) or rest</span><span data-lang="de">Spaziergang mit Happy und Stella (30 Min.) oder Ruhe</span><span data-lang="fr">Promenade avec Happy et Stella (30 min) ou repos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. COPPIA -->
+<section class="occ-section">
+  <div class="occ-inner reverse">
+    <div class="occ-img">
+      <!-- FOTO: usa selfie-colline.png -->
+      <img src="images/selfie-colline.png" alt="Esperienza romantica coppia Valle del Sorsa Cesena Romagna" loading="lazy">
+    </div>
+    <div class="occ-text">
+      <div class="occ-number">02</div>
+      <div class="occ-sub">
+        <span class="il active" data-li="it">💑 Per le Coppie</span>
+        <span class="il" data-li="en">💑 For Couples</span>
+        <span class="il" data-li="de">💑 Für Paare</span>
+        <span class="il" data-li="fr">💑 Pour les Couples</span>
+      </div>
+      <h2 data-lang="it" class="active">Un Giorno Romantico<br>Lontano da Tutto</h2>
+      <h2 data-lang="en">A Romantic Day<br>Away from Everything</h2>
+      <h2 data-lang="de">Ein Romantischer Tag<br>Abseits von allem</h2>
+      <h2 data-lang="fr">Une Journée Romantique<br>Loin de Tout</h2>
+      <p data-lang="it" class="active">Dimenticate i ristoranti e i weekend uguale agli altri. Immaginate: camminare mano nella mano tra i vigneti al tramonto, imparare a fare la pasta insieme, sedervi sulla panchina panoramica con un bicchiere di vino e nessuna fretta. Questo è Experience Romagna per le coppie.</p>
+      <p data-lang="en">Forget restaurants and weekends like all others. Imagine: walking hand in hand through the vineyards at sunset, learning to make pasta together, sitting on the panoramic bench with a glass of wine and no rush. This is Experience Romagna for couples.</p>
+      <p data-lang="de">Vergessen Sie Restaurants und Wochenenden wie alle anderen. Stellen Sie sich vor: Hand in Hand durch die Weinberge bei Sonnenuntergang spazieren, gemeinsam Pasta machen lernen, auf der Panoramabank mit einem Glas Wein sitzen ohne Eile. Das ist Experience Romagna für Paare.</p>
+      <p data-lang="fr">Oubliez les restaurants et les week-ends comme les autres. Imaginez : marcher main dans la main à travers les vignobles au coucher du soleil, apprendre à faire des pâtes ensemble, s'asseoir sur le banc panoramique avec un verre de vin sans se presser. C'est Experience Romagna pour les couples.</p>
+      <div class="program-box">
+        <h4 data-lang="it" class="active">🗓 Esempio di programma coppia:</h4>
+        <h4 data-lang="en">🗓 Example couple program:</h4>
+        <h4 data-lang="de">🗓 Beispiel Paarprogramm:</h4>
+        <h4 data-lang="fr">🗓 Exemple de programme couple :</h4>
+        <div class="program-item"><span class="program-time">10:30</span><span data-lang="it" class="active">Arrivo, caffè e colazione romagnola</span><span data-lang="en">Arrival, coffee and Romagna breakfast</span><span data-lang="de">Ankunft, Kaffee und Romagna-Frühstück</span><span data-lang="fr">Arrivée, café et petit-déjeuner romagnol</span></div>
+        <div class="program-item"><span class="program-time">11:00</span><span data-lang="it" class="active">Trekking romantico tra i calanchi (1h) con Happy e Stella</span><span data-lang="en">Romantic trekking in the badlands (1h) with Happy and Stella</span><span data-lang="de">Romantisches Wandern in den Calanchi (1h) mit Happy und Stella</span><span data-lang="fr">Randonnée romantique dans les calanchi (1h) avec Happy et Stella</span></div>
+        <div class="program-item"><span class="program-time">12:30</span><span data-lang="it" class="active">Cooking class privata: tagliatelle fatte a mano in due</span><span data-lang="en">Private cooking class: tagliatelle made by hand for two</span><span data-lang="de">Private Kochstunde: von Hand gemachte Tagliatelle zu zweit</span><span data-lang="fr">Cours de cuisine privé : tagliatelles faites main à deux</span></div>
+        <div class="program-item"><span class="program-time">14:00</span><span data-lang="it" class="active">Pranzo romantico con il vino del vigneto</span><span data-lang="en">Romantic lunch with vineyard wine</span><span data-lang="de">Romantisches Mittagessen mit dem Weinbergwein</span><span data-lang="fr">Déjeuner romantique avec le vin du vignoble</span></div>
+        <div class="program-item"><span class="program-time">15:30</span><span data-lang="it" class="active">Visita al vigneto e degustazione dell'extravergine</span><span data-lang="en">Vineyard visit and extra virgin olive oil tasting</span><span data-lang="de">Weinbergbesuch und Verkostung des nativen Olivenöls</span><span data-lang="fr">Visite du vignoble et dégustation de l'huile d'olive extra vierge</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. ADDIO CELIBATO -->
+<section class="occ-section">
+  <div class="occ-inner">
+    <div class="occ-img">
+      <!-- FOTO: usa vendemmia.png o vigneto.png -->
+      <img src="images/vendemmia.png" alt="Addio al celibato nubilato Valle del Sorsa Romagna vigneto" loading="lazy">
+    </div>
+    <div class="occ-text">
+      <div class="occ-number">03</div>
+      <div class="occ-sub">
+        <span class="il active" data-li="it">🥂 Addio al Celibato/Nubilato</span>
+        <span class="il" data-li="en">🥂 Bachelor/Bachelorette Party</span>
+        <span class="il" data-li="de">🥂 Junggesellenabschied</span>
+        <span class="il" data-li="fr">🥂 EVJF / EVG</span>
+      </div>
+      <h2 data-lang="it" class="active">L'Addio al Celibato<br>che Nessuno Dimenticherà</h2>
+      <h2 data-lang="en">The Bachelor Party<br>Nobody Will Forget</h2>
+      <h2 data-lang="de">Der Junggesellenabschied<br>den niemand vergessen wird</h2>
+      <h2 data-lang="fr">L'EVG/EVJF<br>que Personne n'Oubliera</h2>
+      <p data-lang="it" class="active">Dimentica i clichés del solito addio al celibato. Niente discoteche, niente limousine, niente kit da comprare online. Immagina invece: un gruppo di amici tra i vigneti di Cesena, mani nella terra durante la vendemmia, una gara di sfoglia a colpi di matterello, e tante risate davanti a un tavolo imbandito. E il ricavato? Va in Africa.</p>
+      <p data-lang="en">Forget the clichés of the usual bachelor party. No nightclubs, no limousines, no kits to buy online. Imagine instead: a group of friends among the vineyards of Cesena, hands in the soil during the harvest, a sfoglia competition with rolling pins, and lots of laughter in front of a laid table. And the proceeds? They go to Africa.</p>
+      <p data-lang="de">Vergessen Sie die Klischees des üblichen Junggesellenabschieds. Keine Diskotheken, keine Limousinen, keine Online-Kits. Stellen Sie sich stattdessen vor: eine Gruppe von Freunden unter den Weinbergen von Cesena, Hände im Boden während der Weinlese, ein Sfoglia-Wettbewerb mit Nudelholz und viel Gelächter vor einem gedeckten Tisch.</p>
+      <p data-lang="fr">Oubliez les clichés de l'EVG/EVJF habituel. Pas de discothèques, pas de limousines, pas de kits à acheter en ligne. Imaginez plutôt : un groupe d'amis dans les vignobles de Cesena, les mains dans la terre pendant les vendanges, un concours de sfoglia à coups de rouleau, et beaucoup de rires devant une table dressée.</p>
+      <div class="program-box">
+        <h4 data-lang="it" class="active">🗓 Esempio programma addio al celibato:</h4>
+        <h4 data-lang="en">🗓 Example bachelor party program:</h4>
+        <h4 data-lang="de">🗓 Beispiel Junggesellenabschied-Programm:</h4>
+        <h4 data-lang="fr">🗓 Exemple programme EVG/EVJF :</h4>
+        <div class="program-item"><span class="program-time">10:00</span><span data-lang="it" class="active">Arrivo con aperitivo di vino e prodotti locali</span><span data-lang="en">Arrival with wine aperitif and local products</span><span data-lang="de">Ankunft mit Weinaperitif und lokalen Produkten</span><span data-lang="fr">Arrivée avec apéritif de vin et produits locaux</span></div>
+        <div class="program-item"><span class="program-time">11:00</span><span data-lang="it" class="active">Trekking nei calanchi (1h) — benvenuto da Happy e Stella!</span><span data-lang="en">Trekking in the badlands (1h) — welcome from Happy and Stella!</span><span data-lang="de">Wandern in den Calanchi (1h) — Willkommen von Happy und Stella!</span><span data-lang="fr">Randonnée dans les calanchi (1h) — bienvenue de Happy et Stella !</span></div>
+        <div class="program-item"><span class="program-time">12:30</span><span data-lang="it" class="active">Gara di sfoglia: chi fa la tagliatella più lunga?</span><span data-lang="en">Sfoglia competition: who makes the longest tagliatella?</span><span data-lang="de">Sfoglia-Wettbewerb: wer macht die längste Tagliatella?</span><span data-lang="fr">Concours de sfoglia : qui fait la tagliatella la plus longue ?</span></div>
+        <div class="program-item"><span class="program-time">14:00</span><span data-lang="it" class="active">Pranzo/cena con tutto quello che abbiamo cucinato + vino</span><span data-lang="en">Lunch/dinner with everything we cooked + wine</span><span data-lang="de">Mittag-/Abendessen mit allem, was wir gekocht haben + Wein</span><span data-lang="fr">Déjeuner/dîner avec tout ce qu'on a cuisiné + vin</span></div>
+        <div class="program-item"><span class="program-time">16:00</span><span data-lang="it" class="active">Tour in trattore nel vigneto — il momento più iconico!</span><span data-lang="en">Tractor tour in the vineyard — the most iconic moment!</span><span data-lang="de">Traktorfahrt im Weinberg — der ikonischste Moment!</span><span data-lang="fr">Tour en tracteur dans le vignoble — le moment le plus iconique !</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. COMPLEANNO -->
+<section class="occ-section">
+  <div class="occ-inner reverse">
+    <div class="occ-img">
+      <!-- FOTO: usa cucina.png o cappelletti.png -->
+      <img src="images/cappelletti.png" alt="Compleanno alternativo Valle del Sorsa Romagna cucina" loading="lazy">
+    </div>
+    <div class="occ-text">
+      <div class="occ-number">04</div>
+      <div class="occ-sub">
+        <span class="il active" data-li="it">🎂 Compleanno & Ricorrenze</span>
+        <span class="il" data-li="en">🎂 Birthday & Anniversaries</span>
+        <span class="il" data-li="de">🎂 Geburtstag & Jubiläen</span>
+        <span class="il" data-li="fr">🎂 Anniversaire & Célébrations</span>
+      </div>
+      <h2 data-lang="it" class="active">Un Compleanno Speciale<br>che Vale un Regalo</h2>
+      <h2 data-lang="en">A Special Birthday<br>Worth a Gift</h2>
+      <h2 data-lang="de">Ein Besonderer Geburtstag<br>Der ein Geschenk wert ist</h2>
+      <h2 data-lang="fr">Un Anniversaire Spécial<br>qui Vaut un Cadeau</h2>
+      <p data-lang="it" class="active">Cosa regalare a qualcuno che ha già tutto? Un'esperienza vera, unica, che non si compra nei negozi. Una giornata nella Valle del Sorsa è il regalo più originale e significativo che puoi fare — e soprattutto, è gratis. L'impatto è garantito.</p>
+      <p data-lang="en">What to give to someone who already has everything? A real, unique experience that you can't buy in shops. A day in the Sorsa Valley is the most original and meaningful gift you can give — and above all, it's free. The impact is guaranteed.</p>
+      <p data-lang="de">Was schenkt man jemandem, der bereits alles hat? Ein echtes, einzigartiges Erlebnis, das man in keinem Geschäft kaufen kann. Ein Tag im Sorsa-Tal ist das originellste und bedeutungsvollste Geschenk, das Sie machen können — und vor allem ist es kostenlos.</p>
+      <p data-lang="fr">Que donner à quelqu'un qui a déjà tout ? Une expérience vraie, unique, qu'on ne peut pas acheter dans les magasins. Une journée dans la Vallée du Sorsa est le cadeau le plus original et significatif que vous puissiez faire — et surtout, c'est gratuit.</p>
+      <div class="program-box">
+        <h4 data-lang="it" class="active">🗓 Esempio programma compleanno:</h4>
+        <h4 data-lang="en">🗓 Example birthday program:</h4>
+        <h4 data-lang="de">🗓 Beispiel Geburtstagsprogramm:</h4>
+        <h4 data-lang="fr">🗓 Exemple programme anniversaire :</h4>
+        <div class="program-item"><span class="program-time">11:00</span><span data-lang="it" class="active">Sorpresa all'arrivo: vino, torta e animali a fare le coccole</span><span data-lang="en">Surprise at arrival: wine, cake and animals for cuddles</span><span data-lang="de">Überraschung bei der Ankunft: Wein, Kuchen und Tiere zum Kuscheln</span><span data-lang="fr">Surprise à l'arrivée : vin, gâteau et animaux pour les câlins</span></div>
+        <div class="program-item"><span class="program-time">12:00</span><span data-lang="it" class="active">Cooking class: il/la festeggiato/a sceglie il menu</span><span data-lang="en">Cooking class: the birthday person chooses the menu</span><span data-lang="de">Kochstunde: der/die Geburtstagskind wählt das Menü</span><span data-lang="fr">Cours de cuisine : l'anniversaire choisit le menu</span></div>
+        <div class="program-item"><span class="program-time">14:00</span><span data-lang="it" class="active">Pranzo con il menu scelto + brindisi speciale</span><span data-lang="en">Lunch with chosen menu + special toast</span><span data-lang="de">Mittagessen mit dem gewählten Menü + besonderer Toast</span><span data-lang="fr">Déjeuner avec le menu choisi + toast spécial</span></div>
+        <div class="program-item"><span class="program-time">15:30</span><span data-lang="it" class="active">Passeggiata nei vigneti o trekking (a scelta)</span><span data-lang="en">Walk in the vineyards or trekking (by choice)</span><span data-lang="de">Spaziergang in den Weinbergen oder Wandern (nach Wahl)</span><span data-lang="fr">Promenade dans les vignobles ou randonnée (au choix)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. TEAM BUILDING -->
+<section class="occ-section">
+  <div class="occ-inner">
+    <div class="occ-img">
+      <!-- FOTO: usa trekking-gruppo.png -->
+      <img src="images/trekking-gruppo.png" alt="Team building aziendale Valle del Sorsa Romagna Cesena" loading="lazy">
+    </div>
+    <div class="occ-text">
+      <div class="occ-number">05</div>
+      <div class="occ-sub">
+        <span class="il active" data-li="it">🏢 Team Building Aziendale</span>
+        <span class="il" data-li="en">🏢 Corporate Team Building</span>
+        <span class="il" data-li="de">🏢 Firmen-Teambuilding</span>
+        <span class="il" data-li="fr">🏢 Team Building d'Entreprise</span>
+      </div>
+      <h2 data-lang="it" class="active">Rafforzate il Team<br>Lontano dall'Ufficio</h2>
+      <h2 data-lang="en">Strengthen Your Team<br>Away from the Office</h2>
+      <h2 data-lang="de">Stärken Sie Ihr Team<br>Abseits des Büros</h2>
+      <h2 data-lang="fr">Renforcez votre Équipe<br>Loin du Bureau</h2>
+      <p data-lang="it" class="active">Cucinare insieme crea legami veri. Camminare insieme apre conversazioni che non nascono mai in ufficio. Un team building nella Valle del Sorsa è un'esperienza che le persone ricordano per anni — non come "l'evento aziendale" ma come "quel giorno fantastico in campagna".</p>
+      <p data-lang="en">Cooking together creates real bonds. Walking together opens conversations that never happen in the office. A team building in the Sorsa Valley is an experience people remember for years — not as "the corporate event" but as "that fantastic day in the countryside".</p>
+      <p data-lang="de">Gemeinsames Kochen schafft echte Bindungen. Gemeinsames Wandern eröffnet Gespräche, die im Büro nie entstehen. Ein Teambuilding im Sorsa-Tal ist ein Erlebnis, das Menschen jahrelang in Erinnerung behalten — nicht als "das Firmenevent" sondern als "diesen fantastischen Tag auf dem Land".</p>
+      <p data-lang="fr">Cuisiner ensemble crée de vrais liens. Marcher ensemble ouvre des conversations qui n'ont jamais lieu au bureau. Un team building dans la Vallée du Sorsa est une expérience dont les gens se souviennent pendant des années — pas comme "l'événement d'entreprise" mais comme "cette fantastique journée à la campagne".</p>
+      <p data-lang="it" class="active">E il ricavato? Va interamente alla missione francescana a Juba, Sudan del Sud. Un team building che fa del bene al mondo.</p>
+      <p data-lang="en">And the proceeds? They go entirely to the Franciscan mission in Juba, South Sudan. A team building that does good in the world.</p>
+      <p data-lang="de">Und die Einnahmen? Sie fließen vollständig an die franziskanische Mission in Juba, Südsudan. Ein Teambuilding, das der Welt Gutes tut.</p>
+      <p data-lang="fr">Et les recettes ? Elles vont entièrement à la mission franciscaine à Juba, Soudan du Sud. Un team building qui fait du bien au monde.</p>
+      <div class="program-box">
+        <h4 data-lang="it" class="active">🗓 Esempio programma team building:</h4>
+        <h4 data-lang="en">🗓 Example team building program:</h4>
+        <h4 data-lang="de">🗓 Beispiel Teambuilding-Programm:</h4>
+        <h4 data-lang="fr">🗓 Exemple programme team building :</h4>
+        <div class="program-item"><span class="program-time">9:30</span><span data-lang="it" class="active">Accoglienza con vino e prodotti locali</span><span data-lang="en">Welcome with wine and local products</span><span data-lang="de">Empfang mit Wein und lokalen Produkten</span><span data-lang="fr">Accueil avec vin et produits locaux</span></div>
+        <div class="program-item"><span class="program-time">10:00</span><span data-lang="it" class="active">Trekking di squadra nei calanchi (1-2h)</span><span data-lang="en">Team trekking in the badlands (1-2h)</span><span data-lang="de">Team-Wandern in den Calanchi (1-2h)</span><span data-lang="fr">Randonnée en équipe dans les calanchi (1-2h)</span></div>
+        <div class="program-item"><span class="program-time">12:00</span><span data-lang="it" class="active">Sfida di cucina a squadre: chi fa la sfoglia migliore?</span><span data-lang="en">Team cooking challenge: who makes the best sfoglia?</span><span data-lang="de">Team-Kochherausforderung: wer macht die beste Sfoglia?</span><span data-lang="fr">Défi cuisine en équipes : qui fait la meilleure sfoglia ?</span></div>
+        <div class="program-item"><span class="program-time">14:00</span><span data-lang="it" class="active">Pranzo conviviale con tutto quello che abbiamo cucinato</span><span data-lang="en">Convivial lunch with everything we cooked</span><span data-lang="de">Geselliges Mittagessen mit allem, was wir gekocht haben</span><span data-lang="fr">Déjeuner convivial avec tout ce qu'on a cuisiné</span></div>
+        <div class="program-item"><span class="program-time">15:30</span><span data-lang="it" class="active">Tour in trattore + visita al vigneto e degustazione</span><span data-lang="en">Tractor tour + vineyard visit and tasting</span><span data-lang="de">Traktorfahrt + Weinbergbesuch und Verkostung</span><span data-lang="fr">Tour en tracteur + visite du vignoble et dégustation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background: var(--green-dark); text-align:center; padding:60px 20px; color:white;">
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="it" class="active">Costruiamo insieme la tua giornata!</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="en">Let's build your day together!</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="de">Gestalten wir Ihren Tag gemeinsam!</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="fr">Construisons votre journée ensemble !</h2>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="it" class="active">Scrivici, raccontaci la tua occasione e creiamo il programma perfetto. Gratis.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="en">Write to us, tell us your occasion and we'll create the perfect program. Free.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="de">Schreib uns, erzähl uns von deinem Anlass und wir erstellen das perfekte Programm. Kostenlos.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="fr">Écrivez-nous, parlez-nous de votre occasion et nous créerons le programme parfait. Gratuit.</p>
+  <a href="https://wa.me/393518821873" target="_blank" class="btn">💬 WhatsApp</a>
+  <a href="mailto:pgp.odv@gmail.com" class="btn btn-outline">✉️ Email</a>
+</section>
+
+<footer>
+  <div class="footer-nav">
+    <a href="index.html" class="nav-home">Home</a>
+    <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+    <a href="missione.html" class="nav-missione">Missione</a>
+    <a href="https://www.facebook.com/share/1J6EupGuLo/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/pgp.odv" target="_blank">Instagram</a>
+  </div>
+  <p><strong>Experience Romagna</strong> — Valle del Sorsa, Cesena, Emilia-Romagna, Italia</p>
+  <p>Un progetto gratuito di <a href="missione.html"><strong>Peace and Good People ODV</strong></a> © 2025</p>
+</footer>
+
+<div class="wa-float">
+  <a href="https://wa.me/393518821873" target="_blank" rel="noopener" class="wa-btn">
+    <span class="wa-icon">💬</span>
+    <span class="wa-text">Scrivici su WhatsApp</span>
+  </a>
+</div>
+
+<script src="lang.js"></script>
+<script>initLang('occasioni');</script>
+</body>
+</html>

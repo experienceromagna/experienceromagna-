@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percorsi Valle del Sorsa – Trekking, Vigneto, Cucina | Experience Romagna</title>
+<meta name="description" content="Tutti i percorsi gratuiti nella Valle del Sorsa: trekking 30min/1h/2h nei calanchi, vigneto Sangiovese, oliveto, cucina romagnola, orto bio, trattore, chiese di Tessello e LuogoRaro. Adatti a tutte le età.">
+<meta name="keywords" content="trekking Valle del Sorsa, percorsi Cesena, cosa fare Romagna bambini, vigneto Sangiovese Cesena, oliveto Romagna, cucina romagnola gratis, LuogoRaro Cesena, chiesa Tessello, orto biologico Romagna, passeggiata calanchi Cesena">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.experienceromagna.com/percorsi.html">
+<meta property="og:title" content="Percorsi – Experience Romagna">
+<meta property="og:description" content="Trekking, vigneto, cucina, orto e molto altro nella Valle del Sorsa. Gratuito, per tutte le età.">
+<meta property="og:url" content="https://www.experienceromagna.com/percorsi.html">
+<meta property="og:image" content="https://www.experienceromagna.com/images/trekking.png">
+<link rel="stylesheet" href="style.css">
+<style>
+.page-hero {
+  background: linear-gradient(160deg, var(--green-dark), var(--green-light));
+  padding: 80px 20px 60px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero-bg {
+  position: absolute; inset: 0;
+  /* FOTO: cambia 'trekking.png' con la foto per l'hero di questa pagina */
+  background-image: url('images/trekking.png');
+  background-size: cover; background-position: center; opacity: 0.25;
+}
+.page-hero-content { position: relative; z-index: 1; max-width: 740px; margin: 0 auto; }
+.page-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 14px; }
+.page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 580px; margin: 0 auto; }
+
+/* DIFFICULTY BADGES */
+.diff-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 700;
+  margin-bottom: 10px; letter-spacing: 0.3px;
+}
+.diff-easy { background: #d4edda; color: #155724; }
+.diff-medium { background: #fff3cd; color: #856404; }
+.diff-all { background: #d1ecf1; color: #0c5460; }
+
+/* AGE BADGE */
+.age-badge {
+  display: inline-block;
+  background: var(--cream); color: var(--earth);
+  padding: 3px 10px; border-radius: 12px; font-size: 11px;
+  font-weight: 700; margin-left: 6px; border: 1px solid var(--earth-light);
+}
+
+/* TRAIL CARD */
+.trail-card {
+  background: white; border-radius: var(--radius);
+  box-shadow: var(--shadow); overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: grid; grid-template-columns: 260px 1fr;
+}
+.trail-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.trail-card-img { overflow: hidden; }
+.trail-card-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trail-card-body { padding: 28px; }
+.trail-card-body h3 { font-size: 1.3rem; color: var(--green-dark); margin-bottom: 8px; }
+.trail-card-body p { color: var(--text-light); font-size: 0.95rem; margin-bottom: 10px; line-height: 1.65; }
+.trail-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.trail-meta span {
+  background: var(--cream); color: var(--green-dark);
+  padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 700;
+}
+
+/* ACTIVITIES GRID */
+.activities-section { background: var(--cream); }
+.act-card {
+  background: white; border-radius: var(--radius);
+  padding: 28px 22px; box-shadow: var(--shadow);
+  transition: transform 0.3s; text-align: center;
+}
+.act-card:hover { transform: translateY(-4px); }
+.act-icon { font-size: 2.8rem; margin-bottom: 14px; }
+.act-card h3 { color: var(--green-dark); font-size: 1.1rem; margin-bottom: 8px; }
+.act-card p { color: var(--text-light); font-size: 0.92rem; }
+
+/* FAQ */
+.faq-section { background: white; }
+.faq-item {
+  border-bottom: 1px solid #e8e0d5;
+  padding: 20px 0;
+}
+.faq-item h3 { color: var(--green-dark); font-size: 1.05rem; margin-bottom: 8px; cursor: pointer; }
+.faq-item p { color: var(--text-light); font-size: 0.95rem; }
+
+@media (max-width: 768px) {
+  .trail-card { grid-template-columns: 1fr; }
+  .trail-card-img { height: 200px; }
+}
+</style>
+</head>
+<body>
+
+<div class="lang-bar">
+  <button onclick="setLang('it','percorsi')" id="btn-it">🇮🇹 Italiano</button>
+  <button onclick="setLang('en','percorsi')" id="btn-en">🇬🇧 English</button>
+  <button onclick="setLang('de','percorsi')" id="btn-de">🇩🇪 Deutsch</button>
+  <button onclick="setLang('fr','percorsi')" id="btn-fr">🇫🇷 Français</button>
+</div>
+
+<nav>
+  <a href="index.html" class="nav-logo">Experience <span>Romagna</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nav-home">Home</a>
+    <a href="percorsi.html" class="nav-percorsi active-page">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+    <a href="missione.html" class="nav-missione">La Nostra Missione</a>
+    <a href="index.html#contatti" class="nav-contatti">Contatti</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html" class="nav-home">Home</a>
+  <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+  <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+  <a href="missione.html" class="nav-missione">La Nostra Missione</a>
+  <a href="index.html#contatti" class="nav-contatti">Contatti</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="page-hero-content">
+    <div class="free-badge">✨ <span class="il active" data-li="it">Tutto Gratuito</span><span class="il" data-li="en">All Free</span><span class="il" data-li="de">Alles Kostenlos</span><span class="il" data-li="fr">Tout Gratuit</span></div>
+    <h1 data-lang="it" class="active">Percorsi ed Esperienze<br>nella Valle del Sorsa</h1>
+    <h1 data-lang="en">Trails & Experiences<br>in the Sorsa Valley</h1>
+    <h1 data-lang="de">Wege & Erlebnisse<br>im Sorsa-Tal</h1>
+    <h1 data-lang="fr">Parcours & Expériences<br>dans la Vallée du Sorsa</h1>
+    <p data-lang="it" class="active">Ogni percorso è diverso. Ogni stagione porta qualcosa di nuovo. Scegli quello che fa per te — o combinali tutti.</p>
+    <p data-lang="en">Every trail is different. Every season brings something new. Choose what suits you — or combine them all.</p>
+    <p data-lang="de">Jeder Weg ist anders. Jede Jahreszeit bringt etwas Neues. Wählen Sie, was zu Ihnen passt — oder kombinieren Sie alles.</p>
+    <p data-lang="fr">Chaque parcours est différent. Chaque saison apporte quelque chose de nouveau. Choisissez ce qui vous convient — ou combinez-les tous.</p>
+  </div>
+</section>
+
+<!-- TREKKING TRAILS -->
+<section style="background: var(--cream); padding: 80px 20px;">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-lang="it" class="active">🥾 I Percorsi di Trekking</h2>
+      <h2 data-lang="en">🥾 Trekking Trails</h2>
+      <h2 data-lang="de">🥾 Wanderwege</h2>
+      <h2 data-lang="fr">🥾 Les Sentiers de Randonnée</h2>
+      <div class="divider"></div>
+      <p data-lang="it" class="active">Tre difficoltà, tre esperienze diverse. Tutti i percorsi si snodano tra i calanchi, i vigneti e le chiese della Valle del Sorsa.</p>
+      <p data-lang="en">Three difficulty levels, three different experiences. All trails wind through the badlands, vineyards and churches of the Sorsa Valley.</p>
+      <p data-lang="de">Drei Schwierigkeitsstufen, drei verschiedene Erlebnisse. Alle Wege führen durch die Calanchi, Weinberge und Kirchen des Sorsa-Tals.</p>
+      <p data-lang="fr">Trois niveaux de difficulté, trois expériences différentes. Tous les sentiers serpentent à travers les calanchi, les vignobles et les églises de la Vallée du Sorsa.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:24px;">
+
+      <!-- TRAIL 1 -->
+      <div class="trail-card">
+        <!-- FOTO: cambia 'trekking-gruppo.png' con la foto del percorso facile -->
+        <div class="trail-card-img"><img src="images/trekking-gruppo.png" alt="Passeggiata breve Valle del Sorsa Cesena adatta a tutti" loading="lazy"></div>
+        <div class="trail-card-body">
+          <span class="diff-badge diff-all">🌿 <span class="il active" data-li="it">Per tutti</span><span class="il" data-li="en">For everyone</span><span class="il" data-li="de">Für alle</span><span class="il" data-li="fr">Pour tous</span></span>
+          <h3 data-lang="it" class="active">🌿 La Passeggiata del Cuore <span class="age-badge">👶 Da 0 anni</span></h3>
+          <h3 data-lang="en">🌿 The Heart Walk <span class="age-badge">👶 From 0 years</span></h3>
+          <h3 data-lang="de">🌿 Der Herzspaziergang <span class="age-badge">👶 Ab 0 Jahre</span></h3>
+          <h3 data-lang="fr">🌿 La Promenade du Cœur <span class="age-badge">👶 Dès 0 an</span></h3>
+          <p data-lang="it" class="active">Una passeggiata dolce di 30 minuti adatta a tutti, anche ai più piccoli in braccio o carrozzina, e agli anziani. Si cammina tra i vigneti e l'orto, con vista panoramica sulla vallata. Si incontrano Happy e Stella che ti faranno compagnia per tutto il percorso. Tappa finale: la panchina panoramica con un bicchiere di vino o una spremuta.</p>
+          <p data-lang="en">A gentle 30-minute walk suitable for everyone, even the smallest children in arms or pram, and the elderly. You walk through the vineyards and kitchen garden, with a panoramic view over the valley. You meet Happy and Stella who will keep you company throughout the route. Final stop: the panoramic bench with a glass of wine or fresh juice.</p>
+          <p data-lang="de">Ein sanfter 30-minütiger Spaziergang, geeignet für alle, auch für die Kleinsten auf dem Arm oder im Kinderwagen und für ältere Menschen. Sie gehen durch die Weinberge und den Gemüsegarten mit Panoramablick über das Tal. Sie treffen Happy und Stella, die Sie auf dem gesamten Weg begleiten werden.</p>
+          <p data-lang="fr">Une douce promenade de 30 minutes adaptée à tous, même aux plus petits dans les bras ou en poussette, et aux personnes âgées. On marche entre les vignobles et le potager, avec vue panoramique sur la vallée. On rencontre Happy et Stella qui vous accompagneront tout au long du parcours.</p>
+          <div class="trail-meta">
+            <span>⏱ 30 min</span>
+            <span>📏 ~1 km</span>
+            <span>🏔 <span class="il active" data-li="it">Pianeggiante</span><span class="il" data-li="en">Flat</span><span class="il" data-li="de">Flach</span><span class="il" data-li="fr">Plat</span></span>
+            <span>📅 <span class="il active" data-li="it">Tutto l'anno</span><span class="il" data-li="en">All year</span><span class="il" data-li="de">Ganzjährig</span><span class="il" data-li="fr">Toute l'année</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAIL 2 -->
+      <div class="trail-card">
+        <!-- FOTO: cambia 'trekking.png' con la foto del percorso medio -->
+        <div class="trail-card-img"><img src="images/trekking.png" alt="Trekking un ora calanchi Valle del Sorsa Cesena Romagna" loading="lazy"></div>
+        <div class="trail-card-body">
+          <span class="diff-badge diff-easy">🌄 <span class="il active" data-li="it">Facile</span><span class="il" data-li="en">Easy</span><span class="il" data-li="de">Leicht</span><span class="il" data-li="fr">Facile</span></span>
+          <h3 data-lang="it" class="active">🌄 I Calanchi e la Chiesa di Tessello <span class="age-badge">🧒 Dai 4 anni</span></h3>
+          <h3 data-lang="en">🌄 The Badlands and Tessello Church <span class="age-badge">🧒 From 4 years</span></h3>
+          <h3 data-lang="de">🌄 Die Calanchi und die Kirche Tessello <span class="age-badge">🧒 Ab 4 Jahre</span></h3>
+          <h3 data-lang="fr">🌄 Les Calanchi et l'Église de Tessello <span class="age-badge">🧒 Dès 4 ans</span></h3>
+          <p data-lang="it" class="active">Un'ora di cammino tra i calanchi — le caratteristiche argille erose dal tempo che rendono la Valle del Sorsa unica in Romagna. Si raggiunge la piccola chiesa romanica di Tessello, con affreschi medievali e una storia millenaria. Happy e Stella vi guideranno lungo il sentiero. Panorami mozzafiato sulla vallata e sul mare, nelle giornate limpide.</p>
+          <p data-lang="en">An hour's walk through the badlands — the characteristic clay formations eroded by time that make the Sorsa Valley unique in Romagna. You reach the small Romanesque church of Tessello, with medieval frescoes and a thousand-year history. Happy and Stella will guide you along the path. Breathtaking views of the valley and sea on clear days.</p>
+          <p data-lang="de">Eine Stunde Wanderung durch die Calanchi — die charakteristischen, vom Zeit erodierten Tonformationen, die das Sorsa-Tal einzigartig in der Romagna machen. Sie erreichen die kleine romanische Kirche von Tessello mit mittelalterlichen Fresken und einer tausendjährigen Geschichte.</p>
+          <p data-lang="fr">Une heure de marche à travers les calanchi — les formations argileuses caractéristiques érodées par le temps qui rendent la Vallée du Sorsa unique en Romagne. On atteint la petite église romane de Tessello, avec ses fresques médiévales et son histoire millénaire.</p>
+          <div class="trail-meta">
+            <span>⏱ 1 ora</span>
+            <span>📏 ~3 km</span>
+            <span>🏔 +80m</span>
+            <span>📅 <span class="il active" data-li="it">Tutto l'anno</span><span class="il" data-li="en">All year</span><span class="il" data-li="de">Ganzjährig</span><span class="il" data-li="fr">Toute l'année</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRAIL 3 -->
+      <div class="trail-card">
+        <!-- FOTO: cambia 'happy-stella.png' con la foto del trekking lungo -->
+        <div class="trail-card-img"><img src="images/happy-stella.png" alt="Trekking lungo 2 ore calanchi LuogoRaro Valle del Sorsa Cesena" loading="lazy"></div>
+        <div class="trail-card-body">
+          <span class="diff-badge diff-medium">⛰️ <span class="il active" data-li="it">Medio</span><span class="il" data-li="en">Moderate</span><span class="il" data-li="de">Mittel</span><span class="il" data-li="fr">Modéré</span></span>
+          <h3 data-lang="it" class="active">⛰️ Il Grande Anello: Tessello, LuogoRaro e i Laghi <span class="age-badge">🧒 Dai 6 anni</span></h3>
+          <h3 data-lang="en">⛰️ The Grand Loop: Tessello, LuogoRaro and the Lakes <span class="age-badge">🧒 From 6 years</span></h3>
+          <h3 data-lang="de">⛰️ Die große Runde: Tessello, LuogoRaro und die Seen <span class="age-badge">🧒 Ab 6 Jahre</span></h3>
+          <h3 data-lang="fr">⛰️ La Grande Boucle : Tessello, LuogoRaro et les Lacs <span class="age-badge">🧒 Dès 6 ans</span></h3>
+          <p data-lang="it" class="active">Il percorso completo della Valle del Sorsa: due ore attraverso i calanchi più spettacolari, i laghi nascosti, la chiesa di Tessello e LuogoRaro — un luogo magico con una storia di spiritualità e comunità. Si torna al punto di partenza in trattore dal punto più lontano. Un'esperienza indimenticabile per chi ama camminare e scoprire.</p>
+          <p data-lang="en">The complete Sorsa Valley route: two hours through the most spectacular badlands, hidden lakes, Tessello church and LuogoRaro — a magical place with a history of spirituality and community. Return to the starting point by tractor from the furthest point. An unforgettable experience for those who love walking and discovering.</p>
+          <p data-lang="de">Die komplette Sorsa-Tal-Route: zwei Stunden durch die spektakulärsten Calanchi, versteckte Seen, die Kirche Tessello und LuogoRaro — ein magischer Ort mit einer Geschichte der Spiritualität und Gemeinschaft. Rückkehr zum Ausgangspunkt mit dem Traktor vom entferntesten Punkt.</p>
+          <p data-lang="fr">Le parcours complet de la Vallée du Sorsa : deux heures à travers les calanchi les plus spectaculaires, les lacs cachés, l'église Tessello et LuogoRaro — un lieu magique avec une histoire de spiritualité et de communauté. Retour au point de départ en tracteur depuis le point le plus éloigné.</p>
+          <div class="trail-meta">
+            <span>⏱ 2 ore</span>
+            <span>📏 ~7 km</span>
+            <span>🏔 +200m</span>
+            <span>🚜 <span class="il active" data-li="it">Ritorno in trattore</span><span class="il" data-li="en">Tractor return</span><span class="il" data-li="de">Rückkehr mit Traktor</span><span class="il" data-li="fr">Retour en tracteur</span></span>
+            <span>📅 <span class="il active" data-li="it">Tutto l'anno</span><span class="il" data-li="en">All year</span><span class="il" data-li="de">Ganzjährig</span><span class="il" data-li="fr">Toute l'année</span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ACTIVITIES -->
+<section class="activities-section">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-lang="it" class="active">🌿 Tutte le Attività</h2>
+      <h2 data-lang="en">🌿 All Activities</h2>
+      <h2 data-lang="de">🌿 Alle Aktivitäten</h2>
+      <h2 data-lang="fr">🌿 Toutes les Activités</h2>
+      <div class="divider"></div>
+      <p data-lang="it" class="active">Combinale come vuoi. Ogni giornata è progettata su misura insieme a te.</p>
+      <p data-lang="en">Combine them as you like. Every day is tailor-made together with you.</p>
+      <p data-lang="de">Kombinieren Sie sie nach Belieben. Jeder Tag wird gemeinsam mit Ihnen maßgeschneidert.</p>
+      <p data-lang="fr">Combinez-les comme vous le souhaitez. Chaque journée est conçue sur mesure avec vous.</p>
+    </div>
+    <div class="grid-3">
+
+      <div class="act-card">
+        <!-- FOTO: usa vigneto.png -->
+        <div class="act-icon">🍇</div>
+        <h3 data-lang="it" class="active">Vigneto Sangiovese</h3>
+        <h3 data-lang="en">Sangiovese Vineyard</h3>
+        <h3 data-lang="de">Sangiovese Weinberg</h3>
+        <h3 data-lang="fr">Vignoble Sangiovese</h3>
+        <p data-lang="it" class="active">Visita guidata al vigneto, spiegazione del ciclo della vite, degustazione del vino di casa. In estate e autunno: vendemmia con le tue mani.</p>
+        <p data-lang="en">Guided visit to the vineyard, explanation of the vine cycle, tasting of house wine. In summer and autumn: grape harvest with your own hands.</p>
+        <p data-lang="de">Geführte Besichtigung des Weinbergs, Erklärung des Rebenkreislaufs, Verkostung des Hausweins. Im Sommer und Herbst: Weinlese mit eigenen Händen.</p>
+        <p data-lang="fr">Visite guidée du vignoble, explication du cycle de la vigne, dégustation du vin maison. En été et automne : vendange avec vos propres mains.</p>
+        <div style="margin-top:12px;">
+          <span class="tag">🍇 Estate–Autunno</span>
+          <span class="age-badge">Da 0 anni</span>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-icon">🫒</div>
+        <h3 data-lang="it" class="active">Oliveto — L'Oro Liquido</h3>
+        <h3 data-lang="en">Olive Grove — Liquid Gold</h3>
+        <h3 data-lang="de">Olivenhain — Flüssiges Gold</h3>
+        <h3 data-lang="fr">Oliveraie — L'Or Liquide</h3>
+        <p data-lang="it" class="active">Scopri gli ulivi secolari della Valle del Sorsa. Degustazione dell'extravergine su pane caldo. In autunno: raccolta delle olive con le tue mani.</p>
+        <p data-lang="en">Discover the ancient olive trees of the Sorsa Valley. Tasting of extra virgin olive oil on warm bread. In autumn: olive picking with your own hands.</p>
+        <p data-lang="de">Entdecken Sie die alten Olivenbäume des Sorsa-Tals. Verkostung des nativen Olivenöls extra auf warmem Brot. Im Herbst: Olivenpflücken mit eigenen Händen.</p>
+        <p data-lang="fr">Découvrez les oliviers anciens de la Vallée du Sorsa. Dégustation de l'huile d'olive extra vierge sur du pain chaud. En automne : cueillette des olives avec vos propres mains.</p>
+        <div style="margin-top:12px;">
+          <span class="tag">🫒 Autunno–Inverno</span>
+          <span class="age-badge">Da 0 anni</span>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <!-- FOTO: usa cucina.png o sfoglia.png -->
+        <div class="act-icon">🧑‍🍳</div>
+        <h3 data-lang="it" class="active">Cucina Romagnola</h3>
+        <h3 data-lang="en">Romagna Cooking Class</h3>
+        <h3 data-lang="de">Romagna Kochkurs</h3>
+        <h3 data-lang="fr">Cours de Cuisine Romagnole</h3>
+        <p data-lang="it" class="active">Tagliatelle, cappelletti, strozzapreti, passatelli, piadina e crescioni. Impari a tirare la sfoglia a mano, raccogli le uova dal pollaio, cucini e mangi tutto insieme.</p>
+        <p data-lang="en">Tagliatelle, cappelletti, strozzapreti, passatelli, piadina and crescioni. You learn to hand-roll sfoglia, collect eggs from the henhouse, cook and eat everything together.</p>
+        <p data-lang="de">Tagliatelle, Cappelletti, Strozzapreti, Passatelli, Piadina und Crescioni. Sie lernen, Sfoglia von Hand auszurollen, sammeln Eier aus dem Hühnerstall, kochen und essen alles zusammen.</p>
+        <p data-lang="fr">Tagliatelles, cappelletti, strozzapreti, passatelli, piadina et crescioni. Vous apprenez à étaler la sfoglia à la main, collectez des œufs au poulailler, cuisinez et mangez tout ensemble.</p>
+        <div style="margin-top:12px;">
+          <span class="tag">🧑‍🍳 Tutto l'anno</span>
+          <span class="age-badge">Da 4 anni</span>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <!-- FOTO: usa orto.png o verdure.png -->
+        <div class="act-icon">🌱</div>
+        <h3 data-lang="it" class="active">Orto Biologico</h3>
+        <h3 data-lang="en">Organic Garden</h3>
+        <h3 data-lang="de">Bio-Garten</h3>
+        <h3 data-lang="fr">Jardin Biologique</h3>
+        <p data-lang="it" class="active">Semina, cura, raccolta di pomodori, zucchine, lattuga, cetrioli e molto altro. Torni a casa con le verdure che hai raccolto tu. I bambini adorano questa esperienza.</p>
+        <p data-lang="en">Sowing, caring for, harvesting tomatoes, zucchini, lettuce, cucumbers and much more. You go home with the vegetables you picked yourself. Children love this experience.</p>
+        <p data-lang="de">Aussaat, Pflege, Ernte von Tomaten, Zucchini, Salat, Gurken und vielem mehr. Sie gehen mit dem selbst gepflückten Gemüse nach Hause. Kinder lieben dieses Erlebnis.</p>
+        <p data-lang="fr">Semis, soin, récolte de tomates, courgettes, laitue, concombres et bien plus encore. Vous rentrez chez vous avec les légumes que vous avez cueillis. Les enfants adorent cette expérience.</p>
+        <div style="margin-top:12px;">
+          <span class="tag">🌱 Primavera–Estate–Autunno</span>
+          <span class="age-badge">Da 0 anni</span>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-icon">🚜</div>
+        <h3 data-lang="it" class="active">Tour in Trattore</h3>
+        <h3 data-lang="en">Tractor Tour</h3>
+        <h3 data-lang="de">Traktorfahrt</h3>
+        <h3 data-lang="fr">Tour en Tracteur</h3>
+        <p data-lang="it" class="active">Il ritorno dal vigneto più lontano in trattore è uno dei momenti più divertenti della giornata. I bambini impazziscono. Gli adulti anche.</p>
+        <p data-lang="en">The return from the furthest vineyard by tractor is one of the most fun moments of the day. Children go crazy. Adults too.</p>
+        <p data-lang="de">Die Rückfahrt vom entferntesten Weinberg mit dem Traktor ist einer der lustigsten Momente des Tages. Kinder flippen aus. Erwachsene auch.</p>
+        <p data-lang="fr">Le retour du vignoble le plus éloigné en tracteur est l'un des moments les plus amusants de la journée. Les enfants adorent. Les adultes aussi.</p>
+        <div style="margin-top:12px;">
+          <span class="tag">🚜 Tutto l'anno</span>
+          <span class="age-badge">Da 0 anni</span>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-icon">⛪</div>
+        <h3 data-lang="it" class="active">Chiese di Tessello e LuogoRaro</h3>
+        <h3 data-lang="en">Tessello Church & LuogoRaro</h3>
+        <h3 data-lang="de">Kirchen Tessello & LuogoRaro</h3>
+        <h3 data-lang="fr">Églises Tessello & LuogoRaro</h3>
+        <p data-lang="it" class="active">Due luoghi carichi di storia, spiritualità e bellezza. La chiesa romanica di Tessello con i suoi affreschi medievali e LuogoRaro, un posto davvero "fuori dal comune".</p>
+        <p data-lang="en">Two places steeped in history, spirituality and beauty. The Romanesque church of Tessello with its medieval frescoes and LuogoRaro, a truly "out of the ordinary" place.</p>
+        <p data-lang="de">Zwei Orte voller Geschichte, Spiritualität und Schönheit. Die romanische Kirche Tessello mit ihren mittelalterlichen Fresken und LuogoRaro, ein wirklich "außergewöhnlicher" Ort.</p>
+        <p data-lang="fr">Deux lieux chargés d'histoire, de spiritualité et de beauté. L'église romane de Tessello avec ses fresques médiévales et LuogoRaro, un endroit vraiment "hors du commun".</p>
+        <div style="margin-top:12px;">
+          <span class="tag">⛪ Tutto l'anno</span>
+          <span class="age-badge">Da 0 anni</span>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-icon">🐶</div>
+        <h3 data-lang="it" class="active">Passeggiata con Happy e Stella</h3>
+        <h3 data-lang="en">Walk with Happy & Stella</h3>
+        <h3 data-lang="de">Spaziergang mit Happy & Stella</h3>
+        <h3 data-lang="fr">Promenade avec Happy & Stella</h3>
+        <p data-lang="it" class="active">Porta a spasso i nostri due cani bianchi sui sentieri della Valle del Sorsa. Un'attività che ama chiunque, specialmente i bambini e gli amanti degli animali.</p>
+        <p data-lang="en">Take our two white dogs for a walk on the Sorsa Valley trails. An activity loved by everyone, especially children and animal lovers.</p>
+        <p data-lang="de">Führen Sie unsere zwei weißen Hunde auf den Wegen des Sorsa-Tals spazieren. Eine Aktivität, die jeder liebt, besonders Kinder und Tierliebhaber.</p>
+        <p data-lang="fr">Promenez nos deux chiens blancs sur les sentiers de la Vallée du Sorsa. Une activité adorée de tous, surtout des enfants et des amoureux des animaux.</p>
+        <div style="margin-top:12px;">
+          <span class="tag">🐶 Tutto l'anno</span>
+          <span class="age-badge">Da 0 anni</span>
+        </div>
+      </div>
+
+      <div class="act-card">
+        <div class="act-icon">🥚</div>
+        <h3 data-lang="it" class="active">Raccolta delle Uova</h3>
+        <h3 data-lang="en">Egg Collection</h3>
+        <h3 data-lang="de">Eiersammeln</h3>
+        <h3 data-lang="fr">Collecte des Œufs</h3>
+        <p data-lang="it" class="active">Vai nel pollaio, raccogli le uova ancora calde e usale per cucinare. Un'esperienza semplice ma magica, specialmente per i bambini che non hanno mai visto da dove vengono le uova.</p>
+        <p data-lang="en">Go to the henhouse, collect the still-warm eggs and use them for cooking. A simple but magical experience, especially for children who have never seen where eggs come from.</p>
+        <p data-lang="de">Gehen Sie zum Hühnerstall, sammeln Sie die noch warmen Eier und verwenden Sie sie zum Kochen. Ein einfaches, aber magisches Erlebnis, besonders für Kinder.</p>
+        <p data-lang="fr">Allez au poulailler, collectez les œufs encore chauds et utilisez-les pour cuisiner. Une expérience simple mais magique, surtout pour les enfants.</p>
+        <div style="margin-top:12px;">
+          <span class="tag">🥚 Tutto l'anno</span>
+          <span class="age-badge">Da 0 anni</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="section-title">
+      <h2 data-lang="it" class="active">❓ Domande Frequenti</h2>
+      <h2 data-lang="en">❓ Frequently Asked Questions</h2>
+      <h2 data-lang="de">❓ Häufig Gestellte Fragen</h2>
+      <h2 data-lang="fr">❓ Questions Fréquentes</h2>
+      <div class="divider"></div>
+    </div>
+    <div style="max-width:800px; margin:0 auto;">
+
+      <div class="faq-item">
+        <h3 data-lang="it" class="active">È davvero tutto gratuito?</h3>
+        <h3 data-lang="en">Is it really all free?</h3>
+        <h3 data-lang="de">Ist wirklich alles kostenlos?</h3>
+        <h3 data-lang="fr">Est-ce vraiment tout gratuit ?</h3>
+        <p data-lang="it" class="active">Sì, assolutamente. Experience Romagna è un progetto di provvidenza di Peace and Good People ODV. Non esiste nessun listino prezzi. Chi vuole può donare liberamente, ma non è obbligatorio.</p>
+        <p data-lang="en">Yes, absolutely. Experience Romagna is a providence project of Peace and Good People ODV. There is no price list. Those who wish can donate freely, but it is not mandatory.</p>
+        <p data-lang="de">Ja, absolut. Experience Romagna ist ein Vorsehungsprojekt von Peace and Good People ODV. Es gibt keine Preisliste. Wer möchte, kann frei spenden, aber es ist nicht obligatorisch.</p>
+        <p data-lang="fr">Oui, absolument. Experience Romagna est un projet de providence de Peace and Good People ODV. Il n'existe pas de liste de prix. Ceux qui le souhaitent peuvent donner librement, mais ce n'est pas obligatoire.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 data-lang="it" class="active">Quante persone possono partecipare?</h3>
+        <h3 data-lang="en">How many people can participate?</h3>
+        <h3 data-lang="de">Wie viele Personen können teilnehmen?</h3>
+        <h3 data-lang="fr">Combien de personnes peuvent participer ?</h3>
+        <p data-lang="it" class="active">Accogliamo gruppi da 2 a 20 persone. Per gruppi più numerosi contattateci per valutare insieme la soluzione migliore.</p>
+        <p data-lang="en">We welcome groups from 2 to 20 people. For larger groups contact us to evaluate the best solution together.</p>
+        <p data-lang="de">Wir empfangen Gruppen von 2 bis 20 Personen. Für größere Gruppen kontaktieren Sie uns, um gemeinsam die beste Lösung zu finden.</p>
+        <p data-lang="fr">Nous accueillons des groupes de 2 à 20 personnes. Pour des groupes plus importants, contactez-nous pour trouver ensemble la meilleure solution.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 data-lang="it" class="active">Cosa devo portare?</h3>
+        <h3 data-lang="en">What should I bring?</h3>
+        <h3 data-lang="de">Was soll ich mitbringen?</h3>
+        <h3 data-lang="fr">Que dois-je apporter ?</h3>
+        <p data-lang="it" class="active">Scarpe comode o da trekking per i percorsi, vestiti che possono sporcarsi per l'orto e la cucina. Acqua e tanta voglia di stare bene. Pensiamo noi al resto!</p>
+        <p data-lang="en">Comfortable or trekking shoes for the trails, clothes that can get dirty for the garden and cooking. Water and lots of desire to have a good time. We take care of the rest!</p>
+        <p data-lang="de">Bequeme Schuhe oder Wanderschuhe für die Wege, Kleidung, die schmutzig werden kann, für den Garten und das Kochen. Wasser und viel Lust auf eine gute Zeit. Wir kümmern uns um den Rest!</p>
+        <p data-lang="fr">Chaussures confortables ou de randonnée pour les sentiers, vêtements pouvant se salir pour le jardin et la cuisine. De l'eau et beaucoup d'envie de passer du bon temps. Nous nous occupons du reste !</p>
+      </div>
+
+      <div class="faq-item">
+        <h3 data-lang="it" class="active">Si può venire con bambini piccoli?</h3>
+        <h3 data-lang="en">Can I come with young children?</h3>
+        <h3 data-lang="de">Kann ich mit Kleinkindern kommen?</h3>
+        <h3 data-lang="fr">Peut-on venir avec de jeunes enfants ?</h3>
+        <p data-lang="it" class="active">Assolutamente sì! La Passeggiata del Cuore (30 min) è adatta anche ai neonati in braccio o carrozzina. L'orto, il pollaio e gli animali sono perfetti per i più piccoli. Per i percorsi di trekking consigliamo dai 4-6 anni.</p>
+        <p data-lang="en">Absolutely yes! The Heart Walk (30 min) is suitable even for newborns in arms or pram. The garden, henhouse and animals are perfect for the littlest ones. For trekking trails we recommend from 4-6 years.</p>
+        <p data-lang="de">Absolut ja! Der Herzspaziergang (30 Min.) ist auch für Neugeborene auf dem Arm oder im Kinderwagen geeignet. Garten, Hühnerstall und Tiere sind perfekt für die Kleinsten. Für Wanderwege empfehlen wir ab 4-6 Jahren.</p>
+        <p data-lang="fr">Absolument oui ! La Promenade du Cœur (30 min) est adaptée même aux nourrissons dans les bras ou en poussette. Le jardin, le poulailler et les animaux sont parfaits pour les tout-petits. Pour les sentiers de randonnée, nous recommandons à partir de 4-6 ans.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background: var(--green-dark); text-align:center; padding:60px 20px; color:white;">
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="it" class="active">Pronto? È Gratis!</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="en">Ready? It's Free!</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="de">Bereit? Es ist kostenlos!</h2>
+  <h2 style="font-size:2rem; margin-bottom:16px; color:var(--gold);" data-lang="fr">Prêt ? C'est Gratuit !</h2>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="it" class="active">Scrivici su WhatsApp e costruiamo insieme la tua giornata perfetta nella Valle del Sorsa.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="en">Write to us on WhatsApp and let's build your perfect day in the Sorsa Valley together.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="de">Schreib uns auf WhatsApp und lass uns zusammen deinen perfekten Tag im Sorsa-Tal gestalten.</p>
+  <p style="opacity:0.9; max-width:500px; margin:0 auto 28px;" data-lang="fr">Écrivez-nous sur WhatsApp et construisons ensemble votre journée parfaite dans la Vallée du Sorsa.</p>
+  <a href="https://wa.me/393518821873" target="_blank" class="btn">💬 WhatsApp</a>
+  <a href="occasioni.html" class="btn btn-outline">
+    <span class="il active" data-li="it">Vedi le Occasioni Speciali →</span>
+    <span class="il" data-li="en">See Special Occasions →</span>
+    <span class="il" data-li="de">Besondere Anlässe sehen →</span>
+    <span class="il" data-li="fr">Voir les Occasions Spéciales →</span>
+  </a>
+</section>
+
+<footer>
+  <div class="footer-nav">
+    <a href="index.html" class="nav-home">Home</a>
+    <a href="percorsi.html" class="nav-percorsi">Percorsi</a>
+    <a href="occasioni.html" class="nav-occasioni">Occasioni</a>
+    <a href="missione.html" class="nav-missione">Missione</a>
+    <a href="https://www.facebook.com/share/1J6EupGuLo/" target="_blank">Facebook</a>
+    <a href="https://www.instagram.com/pgp.odv" target="_blank">Instagram</a>
+  </div>
+  <p><strong>Experience Romagna</strong> — Valle del Sorsa, Cesena, Emilia-Romagna, Italia</p>
+  <p>Un progetto gratuito di <a href="missione.html"><strong>Peace and Good People ODV</strong></a> © 2025</p>
+</footer>
+
+<div class="wa-float">
+  <a href="https://wa.me/393518821873" target="_blank" rel="noopener" class="wa-btn">
+    <span class="wa-icon">💬</span>
+    <span class="wa-text">Scrivici su WhatsApp</span>
+  </a>
+</div>
+
+<script src="lang.js"></script>
+<script>initLang('percorsi');</script>
+</body>
+</html>
