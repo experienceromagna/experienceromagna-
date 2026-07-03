@@ -40,6 +40,12 @@ const LANG_CONFIG = {
       de: 'Unsere Mission – Peace and Good People ODV | Experience Romagna',
       fr: 'Notre Mission – Peace and Good People ODV | Experience Romagna',
     },
+    privacy: {
+      it: 'Privacy & Cookie Policy | Experience Romagna',
+      en: 'Privacy & Cookie Policy | Experience Romagna',
+      de: 'Datenschutz & Cookie-Richtlinie | Experience Romagna',
+      fr: 'Politique de Confidentialité & Cookies | Experience Romagna',
+    },
   }
 };
 
